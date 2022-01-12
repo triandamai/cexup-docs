@@ -49,7 +49,7 @@ This schema is the latest for medical record we use today and updated when the s
 | device_holder | varchar(255)                 |             |
 | device_name   | varchar(255)                 |             |
 | device_mac    | varchar(255)                 |             |
-| device_type   | [enum](/medical-record-enum) |             |
+| device_type   | [enum](/medical-record-type) |             |
 | created_at    | bigint                       |             |
 | updated_at    | bigint                       |             |
 
@@ -73,11 +73,11 @@ This schema is the latest for medical record we use today and updated when the s
 | Name        | type                          | description |
 |-------------|-------------------------------|-------------|
 | id          | bigint                        |             |
-| type        | [enum](/medical-record-enum)  |             |
+| type        | [enum](/medical-record-type)  |             |
 | member_id   | varchar(255)                  |             |
 | nurse_id    | varchar(255)                  |             |
 | hospital_id | varchar(255)                  |             |
-| method      | [enum](/medical-record-enum)  |             |
+| method      | [enum](/medical-record-type)  |             |
 | value       | json                          |             |
 | assets      | varchar(255)                  |             |
 | device_id   | varchar(255)                  |             |
