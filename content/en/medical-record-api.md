@@ -1,8 +1,8 @@
 ---
-title: Medical Record Api 
-description: ''
+title: API 
+description: 'documentation for Medical Record API'
 position: 1 
-category: API
+category: Medical Record
 ---
 <style>
 td, th {
@@ -22,18 +22,282 @@ Before you begin please note this API can be use for all white labeled Cexup app
 The API use `REST` for communication between client and server. There are important element you must include in every
 request on this API, header with `x-api-key` contact developer for getting api key.
 
-## Device
-Feature device IoT management:
+## Medical Record
+Medical record management
 
-### GET list device
+### GET Medical Record
+<code-group>
+  <code-block label="cURL" active>
 
-Getting devices that has registered into database Cexup
+  ```http request
+https://devdevice.cexup.com/api/medical-records/CXPq9AD0XZoOO
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  /api/medical-record/{id}:
+    get:
+      summary: "GET api/medical-record/{id}"
+      operationId: "getById"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Query Params
+
+
+| Name | description        |
+|------|--------------------|
+| size | data count to show |
+| page | pagination         |
+
+### GET Personal
 
 <code-group>
   <code-block label="cURL" active>
 
   ```http request
-   https://devdevice.cexup.com/api/devices
+   https://devdevice.cexup.com/api/medical-records/{{member_id}}/personal
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  /api/medical-records/{id_member}/personal:
+    get:
+      summary: "GET api/medical-records/{id_member}/personal"
+      operationId: "getAllPersonalMedicalRecord"
+      parameters:
+        - name: "id_member"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Query Params
+
+
+| Name | description        |
+|------|--------------------|
+| size | data count to show |
+| page | pagination         |
+| type | enum(optional)     |
+
+### GET By Type
+
+<code-group>
+  <code-block label="cURL" active>
+
+  ```http request
+   https://devdevice.cexup.com/api/medical-records/{{member_id}}/personal/filter
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  /api/medical-records/{id_member}/personal:
+    get:
+      summary: "GET api/medical-records/{id_member}/personal/filter"
+      operationId: "getAllPersonalMedicalRecord"
+      parameters:
+        - name: "id_member"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Query Params
+
+
+| Name | description        |
+|------|--------------------|
+| size | data count to show |
+| page | pagination         |
+| type | enum(optional)     |
+
+### GET Latest
+ <code-group>
+  <code-block label="cURL" active>
+
+  ```http request
+   https://devdevice.cexup.com/api/medical-record/{{member_id}}/latest
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  /api/medical-record/{id}/latest:
+    get:
+      summary: "GET api/medical-record/{id}/latest"
+      operationId: "getLatestMeasurementByUser"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Query Params
+
+
+| Name | description        |
+|------|--------------------|
+| size | data count to show |
+| page | pagination         |
+
+### GET Detail
+ <code-group>
+  <code-block label="cURL" active>
+
+  ```http request
+   https://devdevice.cexup.com/api/medical-record/{{id_medical_record}}
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+   /api/medical-record/{id}:
+     get:
+       summary: "GET api/medical-record/{id}"
+       operationId: "getById"
+       parameters:
+         - name: "id"
+           in: "path"
+           required: true
+           schema:
+             type: "number"
+             format: "int64"
+       responses:
+         "200":
+           description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+### POST Medical Records
+
+Registering device so the device can send data into medical record
+
+<code-group>
+  <code-block label="cURL" active>
+
+  ```http request
+https://devdevice.cexup.com/api/medical-record
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ /api/medical-record:
+   post:
+     summary: "POST api/medical-record"
+     operationId: "createMeasurements"
+     parameters:
+       - name: "x-api-key"
+         in: "header"
+         required: true
+         schema:
+           type: "string"
+     responses:
+       "200":
+         description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Body
+```json
+[
+  {
+    "device_id":"11:FF",
+    "member_id":"dsdfs",
+    "nurse_id":"sada",
+    "type":"BLOOD_PRESSURE",
+    "value":"12",
+    "method":"AUTOMATIC",
+    "created_at":0,
+    "assets":"ini asset",
+    "diagnosis":"diagnosisi",
+    "note":"ini adalah note",
+    "title":"bpm",
+    "mime_type":"text"
+  }
+]
+```
+
+### POST Personal
+
+Registering device so the device can send data into medical record
+
+<code-group>
+  <code-block label="cURL" active>
+
+  ```http request
+   https://devdevice.cexup.com/api/medical_record/personal
   ```
   </code-block>
   <code-block label="Open API">
@@ -59,21 +323,111 @@ Getting devices that has registered into database Cexup
 </code-group>
 
 #### Request Header
----
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Body(Form Date)
+
+| name      | type   | description |
+|-----------|--------|-------------|
+| file      | File   |             |
+| user_id   | String |             |
+| type      | enum   |             |
+| method    | enum   |             |
+| note      | String |             |
+| diagnosis | String |             |
+| title     | String |             |
+
+
+## Device
+Feature device IoT management:
+
+### GET  list devices
+
+Getting devices that has registered into database Cexup
+
+<code-group>
+  <code-block label="cURL" active>
+
+  ```http request
+   https://devdevice.cexup.com/api/devices
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ /api/devices:
+   get:
+     summary: "GET api/devices"
+     operationId: "getAll"
+     responses:
+       "200":
+         description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
 
 | x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
 |-----------|------------------------------------------------|
 
-
 #### Query Params
----
+
 
 | Name | description        |
 |------|--------------------|
 | size | data count to show |
 | page | pagination         |
 
-### POST add device
+### GET  detail device
+
+Getting devices that has registered into database Cexup
+
+<code-group>
+  <code-block label="cURL" active>
+
+  ```http request
+   https://devdevice.cexup.com/api/device/{id_device}
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  /api/device/{id_device}:
+    get:
+      summary: "GET api/device/{id_device}"
+      operationId: "get"
+      parameters:
+        - name: "id_device"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Query Params
+
+
+| Name | description        |
+|------|--------------------|
+| size | data count to show |
+| page | pagination         |
+
+### POST  new device
 
 Registering device so the device can send data into medical record
 
@@ -107,14 +461,13 @@ Registering device so the device can send data into medical record
 </code-group>
 
 #### Request Header
----
+
+
 
 | x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
 |-----------|------------------------------------------------|
 
-
 #### Body
----
 ```json
 [
     
@@ -125,4 +478,167 @@ Registering device so the device can send data into medical record
         "device_holder": "unknown"
     }
 ]
+```
+
+### PUT  existing device
+
+Registering device so the device can send data into medical record
+
+<code-group>
+  <code-block label="cURL" active>
+
+  ```http request
+   https://devdevice.cexup.com/api/device
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  /api/device/{id_device}:
+    put:
+      summary: "PUT api/device/{id_device}"
+      operationId: "update"
+      parameters:
+        - name: "id_device"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Body
+```json
+{
+  "device_name": "string,uniq",
+  "device_mac": "string,uniq",
+  "device_type": "string(CONSUMER/CORPORATE)",
+  "device_holder": "string(hospital)"
+}
+```
+
+## Hospital
+Hospital Management
+
+### GET list hospital
+Get list available hospital 
+
+<code-group>
+  <code-block label="cURL" active>
+
+  ```http request
+   https://devdevice.cexup.com/api/hospitals
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  /api/hospitals:
+    get:
+      summary: "GET api/hospitals"
+      operationId: "getAllHospitals"
+      responses:
+        "200":
+          description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Query Params
+
+
+| Name | description        |
+|------|--------------------|
+| size | data count to show |
+| page | pagination         |
+
+
+
+
+### GET detail hospital
+
+<code-group>
+  <code-block label="cURL" active>
+
+  ```http request
+   https://devdevice.cexup.com/api/hospitals
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  /api/hospitals:
+    get:
+      summary: "GET api/hospitals"
+      operationId: "getAllHospitals"
+      responses:
+        "200":
+          description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Query Params
+
+
+| Name | description        |
+|------|--------------------|
+| size | data count to show |
+| page | pagination         |
+
+### POST  new hospital
+
+#### Request Header
+
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Body
+```json
+{
+  "device_name": "string,uniq",
+  "device_mac": "string,uniq",
+  "device_type": "string(CONSUMER/CORPORATE)",
+  "device_holder": "string(hospital)"
+}
+```
+
+### PUT  existing hospital
+
+#### Request Header
+
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Body
+```json
+{
+  "device_name": "string,uniq",
+  "device_mac": "string,uniq",
+  "device_type": "string(CONSUMER/CORPORATE)",
+  "device_holder": "string(hospital)"
+}
 ```

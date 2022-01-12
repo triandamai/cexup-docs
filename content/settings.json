@@ -1,0 +1,10 @@
+{
+  "title": "cexup-documentation",
+  "url": "",
+  "logo": {
+    "light": "/logo_cexup.svg",
+    "dark": "/logo_cexup.svg"
+  },
+  "github": "nuxt/content",
+  "twitter": "triandamai"
+}

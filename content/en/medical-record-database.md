@@ -13,11 +13,11 @@ td, th {
 }
 </style>
 
-Database for medical record API, we implement Medical Record api using [Spring boot]()
-and Spring JPA that why the schema have some different type example for enum in JPA will be integer
+Database for medical record API, we implement Medical Record api using [Spring boot](https://spring.io)
+and [Spring Data JPA](https://spring.io/projects/spring-data-jpa) that why the schema have some different type example for `enum` in `JPA` become `integer`.
 
 ## Schema
-This schema is the latest for medical record we use today and always change for improvement
+This schema is the latest for medical record we use today and updated when the schema changed.
 <img src="medical-record-db-schema-2022-01-08.png">
 
 
@@ -43,15 +43,15 @@ This schema is the latest for medical record we use today and always change for 
 
 - Table Device
 
-| Name          | type         | description |
-|---------------|--------------|-------------|
-| id            | bigint       |             |
-| device_holder | varchar(255) |             |
-| device_name   | varchar(255) |             |
-| device_mac    | varchar(255) |             |
-| device_type   | enum         |             |
-| created_at    | bigint       |             |
-| updated_at    | bigint       |             |
+| Name          | type                         | description |
+|---------------|------------------------------|-------------|
+| id            | bigint                       |             |
+| device_holder | varchar(255)                 |             |
+| device_name   | varchar(255)                 |             |
+| device_mac    | varchar(255)                 |             |
+| device_type   | [enum](/medical-record-enum) |             |
+| created_at    | bigint                       |             |
+| updated_at    | bigint                       |             |
 
 - Table Hospital
 
@@ -70,19 +70,19 @@ This schema is the latest for medical record we use today and always change for 
 
 - Table Medical Record
 
-| Name        | type         | description |
-|-------------|--------------|-------------|
-| id          | bigint       |             |
-| type        | enum         |             |
-| member_id   | varchar(255) |             |
-| nurse_id    | varchar(255) |             |
-| hospital_id | varchar(255) |             |
-| method      | enum         |             |
-| value       | json         |             |
-| assets      | varchar(255) |             |
-| device_id   | varchar(255) |             |
-| created_at  | varchar      |             |
-| updated_at  | bigint       |             | 
+| Name        | type                          | description |
+|-------------|-------------------------------|-------------|
+| id          | bigint                        |             |
+| type        | [enum](/medical-record-enum)  |             |
+| member_id   | varchar(255)                  |             |
+| nurse_id    | varchar(255)                  |             |
+| hospital_id | varchar(255)                  |             |
+| method      | [enum](/medical-record-enum)  |             |
+| value       | json                          |             |
+| assets      | varchar(255)                  |             |
+| device_id   | varchar(255)                  |             |
+| created_at  | varchar                       |             |
+| updated_at  | bigint                        |             | 
 
 - Table User
 

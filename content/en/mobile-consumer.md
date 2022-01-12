@@ -1,5 +1,5 @@
 ---
-title: Consumer(Android)
+title: Consumer
 description: ''
 position: 2 
 category: Mobile App
@@ -12,46 +12,11 @@ td, th {
     border-bottom-width: 0px !important;
 }
 </style>
+# Introduce
+Today Mobile App Cexup use `MVVM` for design pattern and `Jetpack Compose ` for the UI.
+We have huge improvement in development for both application(android) consumer/corporate.
+Entire module use monorepo and shared code for business logic.
 
-## Why?
-Initially we use integer for different type data example in medical record we use type for grouping what kind the data is but using integer making 
-other developer struggling with knowing what the type, that why we choose `enum`.
+# Android
 
-### Medical Record
-
-#### Medical Record Type
-| Name               | description |
-|--------------------|-------------|
-| TEMPERATURE        |             |
-| HEART_RATE         |             |
-| BLOOD_PRESSURE     |             |
-| BODY_MASS_INDEX    |             |
-| WAIST              |             |
-| BLOOD_OXYGEN       |             |
-| STETHOSCOPE        |             |
-| ELECTROCARDIOGRAPH |             |
-| PEDOMETER          |             |
-| SLEEP              |             |
-| RESPIRATION        |             |
-| RONTGEN            |             |
-| LABTEST            |             |
-| MEDICINE           |             |
-| NOTE               |             |
-
-#### Medical Record Method
-| Name       | description |
-|------------|-------------|
-| AUTOMATIC  |             |
-| MANUAL     |             |
-| PERSONAL   |             |
-
-
-### Device
-
-#### Device type
-| Name       | description |
-|------------|-------------|
-| CONSUMER   |             |
-| CORPORATE  |             |
-
-### Hospital
+# IOS
