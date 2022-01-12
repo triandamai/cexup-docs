@@ -12,7 +12,11 @@ td, th {
     border-bottom-width: 0px !important;
 }
 </style>
+<alert type="success">
 
+New documentation cexup
+
+</alert>
 These docs covered about basic implementation Medical Record API Cexup. if you work for/at Cexup you can use these docs
 or contact your Project Manager for more detail.
 
@@ -110,7 +114,7 @@ Medical record management
 |------|--------------------|
 | size | data count to show |
 | page | pagination         |
-| type | enum(optional)[enum](/medical-record-type#medical-record)     |
+| type | medical record type(optional)[enum](/medical-record-type#medical-record)     |
 
 ### GET By Type
 
@@ -154,7 +158,7 @@ Medical record management
 |------|--------------------|
 | size | data count to show |
 | page | pagination         |
-| type | enum(optional)[enum](/medical-record-type#medical-record)    |
+| type | medical record type(optional)[enum](/medical-record-type#medical-record)    |
 
 ### GET Latest
  <code-group>
@@ -341,7 +345,7 @@ Registering device so the device can send data into medical record
 | file      | File   |             |
 | user_id   | String |             |
 | type      | [type](/medical-record-type#medical-record)   |             |
-| method    | [type](/medical-record-type#medical-record)   |             |
+| method    | [method](/medical-record-type#medical-record)   |             |
 | note      | String |             |
 | diagnosis | String |             |
 | title     | String |             |
