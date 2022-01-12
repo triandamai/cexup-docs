@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "myproject-64aac"
+  },
+  "targets": {
+    "myproject-64aac": {
+      "hosting": {
+        "cexup-docs": [
+          "cexup-docs"
+        ]
+      }
+    }
+  }
+}
