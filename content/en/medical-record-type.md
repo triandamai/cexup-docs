@@ -1,5 +1,5 @@
 ---
-title: Enum
+title: Type
 description: ''
 position: 3 
 category: Medical Record
@@ -16,6 +16,8 @@ td, th {
 ## Why?
 Initially we use integer for different type data example in medical record we use type for grouping what kind the data is but using integer making 
 other developer struggling with knowing what the type, that why we choose `enum`.
+
+## Data Type
 
 ### Medical Record
 
@@ -55,3 +57,7 @@ other developer struggling with knowing what the type, that why we choose `enum`
 | CORPORATE  |             |
 
 ### Hospital
+
+## Schema
+
+### Medical Record
