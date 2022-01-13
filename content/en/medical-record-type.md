@@ -1,7 +1,7 @@
 ---
 title: Type
 description: ''
-position: 3 
+position: 6 
 category: Medical Record
 ---
 <style>
@@ -51,6 +51,7 @@ other developer struggling with knowing what the type, that why we choose `enum`
 ### Device
 
 #### Device type
+
 | Name       | description |
 |------------|-------------|
 | CONSUMER   |             |
@@ -62,7 +63,9 @@ other developer struggling with knowing what the type, that why we choose `enum`
 |------------|-------------|
 | CONSUMER   |             |
 | CORPORATE  |             |
+
 ## Schema
+
 ### Medical Record
 1. Body Mass Index
 
@@ -79,6 +82,18 @@ other developer struggling with knowing what the type, that why we choose `enum`
 | diastole  |     int        |
 
 3. Blood Oxygen
+
+| Name       | description |
+|------------|-------------|
+| spo2   |   int          |
+
+4. Heart Rate
+
+| Name       | description |
+|------------|-------------|
+| spo2   |   int          |
+
+4. Heart Rate
 
 | Name       | description |
 |------------|-------------|
