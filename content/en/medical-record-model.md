@@ -168,3 +168,27 @@ Contoh:
 ### Pedometer
 
 ### Sleep 
+
+## Response
+Skema response pada API Medical Record
+
+- tidak memilik akses/api key tidak ada
+
+```json
+{
+    "status": "UNAUTHORIZED",
+    "code": 401,
+    "data": [],
+    "message": "You dont have access for contact your admin for get the access"
+}
+```
+- berhasil
+
+```json
+{
+    "status": "OK",
+    "code": 200,
+    "data": [],
+    "message": "Berhasil mengambil data"
+}
+```

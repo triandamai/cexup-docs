@@ -65,36 +65,3 @@ other developer struggling with knowing what the type, that why we choose `enum`
 | CORPORATE  |             |
 
 ## Schema
-
-### Medical Record
-1. Body Mass Index
-
-| Name       | description |
-|------------|-------------|
-| weight   |   float          |
-| height  |     float        |
-
-2. Blood Pressure
-
-| Name       | description |
-|------------|-------------|
-| systole   |   int          |
-| diastole  |     int        |
-
-3. Blood Oxygen
-
-| Name       | description |
-|------------|-------------|
-| spo2   |   int          |
-
-4. Heart Rate
-
-| Name       | description |
-|------------|-------------|
-| spo2   |   int          |
-
-4. Heart Rate
-
-| Name       | description |
-|------------|-------------|
-| spo2   |   int          |
