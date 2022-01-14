@@ -45,7 +45,7 @@ Seperti yang terlihat pada data diatas untuk menyimpan data medical record terda
 | height  |     float        |
 
 Contoh:
-```json5
+```json
   {
     ...
     "value":{
@@ -79,16 +79,13 @@ Contoh:
 
 | Name       | description |
 |------------|-------------|
-| spo2   |   int          |
+| value   |   int(%)          |
 
 Contoh:
 ```json5
   {
     ...
-    "value":{
-        "systole":80,
-        "diastole":90
-    }
+    "value":"85"
     ...
   }
 ```
@@ -97,28 +94,13 @@ Contoh:
 
 | Name       | description |
 |------------|-------------|
-| value   |   int          |
+| value   |   int/minute         |
 
 Contoh:
 ```json
   {
     ...
-    "value":85
-    ...
-  }
-```
-
-### Heart Rate
-
-| Name       | description |
-|------------|-------------|
-| value   |   int          |
-
-Contoh:
-```json
-  {
-    ...
-    "value":85
+    "value":70
     ...
   }
 ```
@@ -127,22 +109,22 @@ Contoh:
 
 | Name       | description |
 |------------|-------------|
-| value   |   int          |
+| value   |   int(CM)          |
 
 Contoh:
 ```json
   {
     ...
-    "value":85
+    "value":40.5
     ...
   }
 ```
 
-### Pedometer
+### Waist
 
 | Name       | description |
 |------------|-------------|
-| value   |   int          |
+| value   |   int(CM)         |
 
 Contoh:
 ```json
@@ -157,7 +139,7 @@ Contoh:
 
 | Name       | description |
 |------------|-------------|
-| value   |   int          |
+| value   |   decimal(Celcius)          |
 
 Contoh:
 ```json
@@ -167,3 +149,22 @@ Contoh:
     ...
   }
 ```
+
+### Respiration
+
+| Name       | description |
+|------------|-------------|
+| value   |   int(%)          |
+
+Contoh:
+```json
+  {
+    ...
+    "value":85
+    ...
+  }
+```
+
+### Pedometer
+
+### Sleep 
