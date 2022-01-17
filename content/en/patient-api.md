@@ -1,8 +1,8 @@
 ---
 title: API 
-description: 'documentation for Auth API'
+description: 'documentation for Patient API'
 position: 12 
-category: Authentication
+category: Patient
 ---
 <style>
 td, th {
@@ -336,7 +336,7 @@ Getting devices that has registered into database Cexup
 | page | pagination         |
 
 
-## POST Detail Artikel
+### POST Detail Artikel
 
 <code-group>
   <code-block label="Http" active>
@@ -459,3 +459,321 @@ Get list available hospital
 | doctor_has_hospital_id | required (int)         |
 | date                   | date_format ( Y-m-d )  |
 | appointment            | (string)               |
+
+### POST Booking Doctor
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://app.cexup.com/api/doctor/booking
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+
+#### Body
+
+| Name                   | description                       |
+|------------------------|-----------------------------------|
+| username               | required (string)                 |
+| username_doctor        | required (string)                 |
+| user_id                | required (text)                   |
+| id                     | required (int)                    |
+| time                   | required (string)                 |
+| type                   | required (enum = reservasi / call)|
+| patient                | required (string)                 |
+| price                  | required (string)                 |
+
+### POST List Order
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://app.cexup.com/api/user/orders
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+
+#### Body
+
+| Name                   | description            |
+|------------------------|------------------------|
+| user_id                | (text)                 |
+| data                   | (int)                  |
+| appointment            | (string)               |
+| type                   | (enum = pending / booked / apointment / finish / failed)  |
+
+### POST Detail Order
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://app.cexup.com/api/user/order/show
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+
+#### Body
+
+| Name                   | description            |
+|------------------------|------------------------|
+| transaction_id         | required (string)      |
+
+### PUT Reschedulle Order
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://app.cexup.com/api/user/orders
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+
+#### Body
+
+| Name                   | description            |
+|------------------------|------------------------|
+| transaction_id         | required (string)      |
+| type                   | required (enum = accept / reject_by_patient / reschedulle_patient) |
+
+
+### PUT Cancel Order
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://app.cexup.com/api/user/orders
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+
+#### Body
+
+| Name                   | description            |
+|------------------------|------------------------|
+| transaction_id         | required (string)      |
+| type                   | required (enum = accept / reject_by_patient / reschedulle_patient) |
+
+### GET List Produk
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://app.cexup.com/api/ecommerce/product?page=1
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+
+#### Body
+| Name | description        |
+|------|--------------------|
+| data | data count to show |
+| page | pagination         |
+
+### GET List Katagori product
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://app.cexup.com/api/ecommerce/category?page=1?data=10
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+
+#### Body
+
+ Name | description         |
+|------|--------------------|
+| data | data count to show |
+| page | pagination         |
+
+### GET Detail Product
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://app.cexup.com/api/ecommerce/product/slug-product
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+
+#### Body
+
+ Name | description         |
+|------|--------------------|
+| slug | required (string)  |
+
+
+### GET List Product Katagori
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://app.cexup.com/api/ecommerce/category/slug-category
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+
+#### Body
+
+ Name | description         |
+|------|--------------------|
+| slug | required (string)  |
+
+### POST Obgyn Profile
+
+Registering device so the device can send data into medical record
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+https://app.cexup.com/api/obgyn
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+
+#### Body
+```json
+{
+    "user_id": "eyJpdiI6Ik1ZdjVad2Rrd2VUc2psa0NueGFWMXc9PSIsInZhbHVlIjoibDVMYUliRk1MejArVkNWNG1yakszUT09IiwibWFjIjoiOTM2ZTE0Njc0MDkyZDgzYmRjODUzODM5Njc5NmIxN2M3MjMxZTNmMzZlMDYxNTFjZmNlNzY5MzA4YmMzMWY4ZCJ9",
+    "suami": "papa - required",
+    "faskes1": "faskes1 - optional",
+    "faskes_rujukan": "rujukan - optional",
+    "pendidikan": "sd/smp/sma/diploma/sarjana/etc... - optional",
+    "pekerjaan": "Direktur/etc... - optional"
+}
+```
+
