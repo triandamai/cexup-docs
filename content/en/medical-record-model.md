@@ -232,7 +232,7 @@ Contoh:
   }
 ```
 
-### Pedometer
+### PEDOMETER
 ```json
 {
   "value": "{\"sportCalorie\":3.0,\"sportDistance\":70.0,\"sportEndTime\":1641214800000,\"sportStartTime\":1641213000000,\"sportStep\":86}"
@@ -240,7 +240,7 @@ Contoh:
 
 ```
 
-### Sleep
+### SLEEP
 
 
 Contoh:
