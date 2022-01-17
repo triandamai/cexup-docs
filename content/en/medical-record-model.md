@@ -47,7 +47,7 @@ Seperti yang terlihat pada data diatas untuk menyimpan data medical record terda
 Contoh:
 ```json
   {
-    "value":"{'weight':80, 'height':90}"
+    "value":"{\"weight\":80, \"height\":90}"
   
   }
 ```
@@ -62,7 +62,7 @@ Contoh:
 Contoh:
 ```json5
   {
-    "value":"{'systole':80, 'diastole':90}"
+    "value":"{\"systole\":80, \"diastole\":90}"
   }
 ```
 
