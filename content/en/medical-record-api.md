@@ -296,57 +296,6 @@ https://devdevice.cexup.com/api/medical-record
 |method|medical record method[method](/medical-record-type#medical-record)|
 |value|value with type [`JSON`](medical-record-model#skema)|
 
-
-
-### POST Personal
-
-Registering device so the device can send data into medical record
-
-<code-group>
-  <code-block label="Http" active>
-
-  ```http request
-   https://devdevice.cexup.com/api/medical_record/personal
-  ```
-  </code-block>
-  <code-block label="Open API">
-
-  ```yaml
-  /api/device/{id_device}:
-    get:
-      summary: "GET api/device/{id_device}"
-      operationId: "get"
-      parameters:
-        - name: "id_device"
-          in: "path"
-          required: true
-          schema:
-            type: "number"
-            format: "int64"
-      responses:
-        "200":
-          description: "OK"
-  ```
-
-  </code-block>
-</code-group>
-
-#### Request Header
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
-
-#### Body(Form Date)
-
-| name      | type   | description |
-|-----------|--------|-------------|
-| file      | File   |             |
-| user_id   | String |             |
-| type      | [type](/medical-record-type#medical-record)   |             |
-| method    | [method](/medical-record-type#medical-record)   |             |
-| note      | String |             |
-| diagnosis | String |             |
-| title     | String |             |
-
 ### PUT Medical Record
 
 Registering device so the device can send data into medical record
@@ -408,6 +357,58 @@ https://devdevice.cexup.com/api/medical-record/{{id}}
 |type|medical record type[type](/medical-record-type#medical-record)|
 |method|medical record method[method](/medical-record-type#medical-record)|
 |value|value with type [`JSON`](medical-record-model#skema)|
+
+
+
+### POST Personal
+
+Registering device so the device can send data into medical record
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://devdevice.cexup.com/api/medical_record/personal
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  /api/device/{id_device}:
+    get:
+      summary: "GET api/device/{id_device}"
+      operationId: "get"
+      parameters:
+        - name: "id_device"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Body(Form Date)
+
+| name      | type   | description |
+|-----------|--------|-------------|
+| file      | File   |             |
+| user_id   | String |             |
+| type      | [type](/medical-record-type#medical-record)   |             |
+| method    | [method](/medical-record-type#medical-record)   |             |
+| note      | String |             |
+| diagnosis | String |             |
+| title     | String |             |
+
 
 
 ### PUT Personal Medical Record
