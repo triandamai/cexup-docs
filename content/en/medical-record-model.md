@@ -37,7 +37,7 @@ Seperti yang terlihat pada data diatas untuk menyimpan data medical record terda
 
 ## Skema
 
-### Body Mass Index
+### BODY_MASS_INDEX
 
 | Name        | type    | unit |
 |-------------|---------|------|
@@ -52,7 +52,7 @@ Contoh:
   }
 ```
 
-### Blood Pressure
+### BLOOD_PRESSURE
 
 | Name         | type | unit |
 |--------------|------|------|
@@ -66,7 +66,7 @@ Contoh:
   }
 ```
 
-### Blood Oxygen
+### BLOOD_OXYGEN
 
 | Name     | type  | unit |
 |----------|-------|------|
@@ -79,7 +79,7 @@ Contoh:
   }
 ```
 
-### Heart Rate
+### HEART_RATE
 
 | Name     | type | unit     |
 |----------|------|----------|
@@ -92,7 +92,7 @@ Contoh:
   }
 ```
 
-### Waist
+### WAIST
 
 | Name     | type    | unit  |
 |----------|---------|-------|
@@ -105,7 +105,7 @@ Contoh:
   }
 ```
 
-### Temperature
+### TEMPERATURE
 
 | Name    | type    | unit    |
 |---------|---------|---------|
@@ -118,7 +118,7 @@ Contoh:
   }
 ```
 
-### Respiration
+### RESPIRATION
 
 | Name   | type | unit |
 |--------|------|------|
@@ -155,7 +155,7 @@ Contoh:
     "value":"2500"
   }
 ```
-### FUNDAL HEIGHT
+### FUNDAL_HEIGHT
 
 | Name    | type    | unit |
 |---------|---------|------|
