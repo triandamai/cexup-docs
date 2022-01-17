@@ -1,7 +1,7 @@
 ---
 title: Type
 description: ''
-position: 3 
+position: 6 
 category: Medical Record
 ---
 <style>
@@ -39,6 +39,12 @@ other developer struggling with knowing what the type, that why we choose `enum`
 | LABTEST            |             |
 | MEDICINE           |             |
 | NOTE               |             |
+|HPHT   |  |
+|HEMOGLOBIN ||
+|FUNDAL_HEIGHT  ||
+|FHR    ||
+|URINE_PROTEIN  ||
+|REDUCTION_GLUCOSE  ||
 
 #### Medical Record Method
 | Name       | description |
@@ -51,6 +57,7 @@ other developer struggling with knowing what the type, that why we choose `enum`
 ### Device
 
 #### Device type
+
 | Name       | description |
 |------------|-------------|
 | CONSUMER   |             |
@@ -58,6 +65,9 @@ other developer struggling with knowing what the type, that why we choose `enum`
 
 ### Hospital
 
-## Schema
+| Name       | description |
+|------------|-------------|
+| CONSUMER   |             |
+| CORPORATE  |             |
 
-### Medical Record
+## Schema
