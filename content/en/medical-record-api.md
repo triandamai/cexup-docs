@@ -31,7 +31,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
   <code-block label="Http" active>
 
   ```http request
-    https://devdevice.cexup.com/api/medical-records/{{member_id/user_code}}
+    https://devdevice.cexup.com/api/medical-records/{{user_code}}
   ```
   </code-block>
   <code-block label="Open API">
@@ -75,7 +75,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
   <code-block label="Http" active>
 
   ```http request
-   https://devdevice.cexup.com/api/medical-records/{{member_id/user_code}}/personal
+   https://devdevice.cexup.com/api/medical-records/{{user_code}}/personal
   ```
   </code-block>
   <code-block label="Open API">
@@ -119,7 +119,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
   <code-block label="Http" active>
 
   ```http request
-   https://devdevice.cexup.com/api/medical-records/{{member_id/user_code}}/personal/filter
+   https://devdevice.cexup.com/api/medical-records/{{user_code}}/personal/filter
   ```
   </code-block>
   <code-block label="Open API">
@@ -162,7 +162,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
   <code-block label="Http" active>
 
   ```http request
-   https://devdevice.cexup.com/api/medical-record/{{member_id/user_code}}/latest
+   https://devdevice.cexup.com/api/medical-record/{{user_code}}/latest
   ```
   </code-block>
   <code-block label="Open API">
@@ -242,7 +242,7 @@ Registering device so the device can send data into medical record
   <code-block label="Http" active>
 
   ```http request
-https://devdevice.cexup.com/api/medical-record
+  https://devdevice.cexup.com/api/medical-record
   ```
   </code-block>
   <code-block label="Open API">
@@ -290,11 +290,11 @@ https://devdevice.cexup.com/api/medical-record
 ]
 ```
 #### Body References
-| type | description |
-|-----------|------------------------------------------------|
-|type|medical record type[type](/medical-record-type#medical-record)|
-|method|medical record method[method](/medical-record-type#medical-record)|
-|value|value with type [`JSON`](medical-record-model#skema)|
+| type   | description                                                        |
+|--------|--------------------------------------------------------------------|
+| type   | medical record type[type](/medical-record-type#medical-record)     |
+| method | medical record method[method](/medical-record-type#medical-record) |
+| value  | value with type [`JSON`](medical-record-model#skema)               |
 
 ### PUT Medical Record
 
@@ -352,13 +352,11 @@ https://devdevice.cexup.com/api/medical-record/{{id}}
 ]
 ```
 #### Body References
-| type | description |
-|-----------|------------------------------------------------|
-|type|medical record type[type](/medical-record-type#medical-record)|
-|method|medical record method[method](/medical-record-type#medical-record)|
-|value|value with type [`JSON`](medical-record-model#skema)|
-
-
+| type       | description                                                        |
+|------------|--------------------------------------------------------------------|
+| type       | medical record type[type](/medical-record-type#medical-record)     |
+| method     | medical record method[method](/medical-record-type#medical-record) |
+| value      | value with type [`JSON`](medical-record-model#skema)               |
 
 ### POST Personal
 
@@ -399,17 +397,15 @@ Registering device so the device can send data into medical record
 
 #### Body(Form Date)
 
-| name      | type   | description |
-|-----------|--------|-------------|
-| file      | File   |             |
-| user_id   | String |             |
+| name      | type                                          | description |
+|-----------|-----------------------------------------------|-------------|
+| file      | File                                          |             |
+| user_id   | String                                        |             |
 | type      | [type](/medical-record-type#medical-record)   |             |
-| method    | [method](/medical-record-type#medical-record)   |             |
-| note      | String |             |
-| diagnosis | String |             |
-| title     | String |             |
-
-
+| method    | [method](/medical-record-type#medical-record) |             |
+| note      | String                                        |             |
+| diagnosis | String                                        |             |
+| title     | String                                        |             |
 
 ### PUT Personal Medical Record
 
@@ -450,15 +446,15 @@ Registering device so the device can send data into medical record
 
 #### Body(Form Date)
 
-| name      | type   | description |
-|-----------|--------|-------------|
-| file      | File   |             |
-| user_id   | String |             |
+| name      | type                                          | description |
+|-----------|-----------------------------------------------|-------------|
+| file      | File                                          |             |
+| user_id   | String                                        |             |
 | type      | [type](/medical-record-type#medical-record)   |             |
-| method    | [method](/medical-record-type#medical-record)   |             |
-| note      | String |             |
-| diagnosis | String |             |
-| title     | String |             |
+| method    | [method](/medical-record-type#medical-record) |             |
+| note      | String                                        |             |
+| diagnosis | String                                        |             |
+| title     | String                                        |             |
 
 ### DELETE Medical Record
 
