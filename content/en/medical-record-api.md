@@ -31,7 +31,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
   <code-block label="Http" active>
 
   ```http request
-    https://devdevice.cexup.com/api/medical-records/{{user_code}}
+  https://devdevice.cexup.com/api/medical-records/{{user_code}}
   ```
   </code-block>
   <code-block label="Open API">
@@ -75,7 +75,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
   <code-block label="Http" active>
 
   ```http request
-   https://devdevice.cexup.com/api/medical-records/{{user_code}}/personal
+  https://devdevice.cexup.com/api/medical-records/{{user_code}}/personal
   ```
   </code-block>
   <code-block label="Open API">
@@ -119,7 +119,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
   <code-block label="Http" active>
 
   ```http request
-   https://devdevice.cexup.com/api/medical-records/{{user_code}}/personal/filter
+  https://devdevice.cexup.com/api/medical-records/{{user_code}}/personal/filter
   ```
   </code-block>
   <code-block label="Open API">
@@ -162,7 +162,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
   <code-block label="Http" active>
 
   ```http request
-   https://devdevice.cexup.com/api/medical-record/{{user_code}}/latest
+  https://devdevice.cexup.com/api/medical-record/{{user_code}}/latest
   ```
   </code-block>
   <code-block label="Open API">
@@ -199,12 +199,12 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
 | size | data count to show |
 | page | pagination         |
 
-### GET Detail
+### GET By Id
  <code-group>
   <code-block label="Http" active>
 
   ```http request
-   https://devdevice.cexup.com/api/medical-record/{{id_medical_record}}
+  https://devdevice.cexup.com/api/medical-record/{{id_medical-record}}
   ```
   </code-block>
   <code-block label="Open API">
@@ -304,7 +304,7 @@ Registering device so the device can send data into medical record
   <code-block label="Http" active>
 
   ```http request
-https://devdevice.cexup.com/api/medical-record/{{id}}
+  https://devdevice.cexup.com/api/medical-record/{{id}}
   ```
   </code-block>
   <code-block label="Open API">
@@ -366,7 +366,7 @@ Registering device so the device can send data into medical record
   <code-block label="Http" active>
 
   ```http request
-   https://devdevice.cexup.com/api/medical_record/personal
+  https://devdevice.cexup.com/api/medical-record/personal
   ```
   </code-block>
   <code-block label="Open API">
@@ -415,7 +415,7 @@ Registering device so the device can send data into medical record
   <code-block label="Http" active>
 
   ```http request
-   https://devdevice.cexup.com/api/medical_record/personal/{{id}}
+  https://devdevice.cexup.com/api/medical-record/personal/{{id}}
   ```
   </code-block>
   <code-block label="Open API">
@@ -464,7 +464,7 @@ Registering device so the device can send data into medical record
   <code-block label="Http" active>
 
   ```http request
-   https://devdevice.cexup.com/api/medical_record/{{id}}
+  https://devdevice.cexup.com/api/medical-record/{{id}}
   ```
   </code-block>
   <code-block label="Open API">
