@@ -53,13 +53,15 @@ Authentication management
 | Content-Type  | application/json |
 | Authorization | Bearer Token     |
 
-#### Body
+### Body
 
+```json
+{
+    "username": "isman08",
+    "password": "password"
+}
+```
 
-| Name     | description                        |
-|----------|------------------------------------|
-| email    | required (username/email) (string) |
-| password | required  (string)                 |
 
 ### POST Register Patient
 
@@ -86,6 +88,18 @@ Authentication management
 | Content-Type  | application/json |
 
 #### Body
+
+```json
+{
+    "name" : "Afri Ismanto Hidayat",
+    "username" : "isman081",
+    "email" : "afrihidayat@gmail.com",
+    "password" : "password",
+    "address" : "Address here"
+}
+```
+
+#### Body (Form Data)
 
 
 | Name     | description        |
