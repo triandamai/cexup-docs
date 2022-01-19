@@ -69,6 +69,60 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
 | size | data count to show |
 | page | pagination         |
 
+### GET By Date Range
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+  https://devdevice.cexup.com/api/medical-record/{{id_member}}/daily
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  /api/medical-record/{id_member}/daily:
+    get:
+      summary: "GET api/medical-record/{id_member}/daily"
+      operationId: "getDailyMedicalRecord"
+      parameters:
+      - name: "id_member"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      - name: "startDate"
+        in: "query"
+        required: true
+        schema:
+          type: "number"
+          format: "int64"
+      - name: "endDate"
+        in: "query"
+        required: true
+        schema:
+          type: "number"
+          format: "int64"
+      responses:
+        "200":
+          description: "OK"
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
+|-----------|------------------------------------------------|
+
+#### Query Params
+
+
+| Name | description        |
+|------|--------------------|
+| startDate | DateTimeMilis(bigint) |
+| endDate | DateTimeMilis(bigint)         |
+
 ### GET Personal
 
 <code-group>
