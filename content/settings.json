@@ -1,10 +1,10 @@
 {
   "title": "cexup-documentation",
-  "url": "",
+  "url": "https://cexup.com",
   "logo": {
-    "light": "/logo_cexup.svg",
-    "dark": "/logo_cexup.svg"
+    "light": "/logo.png",
+    "dark": "/logo-dark.png"
   },
-  "github": "nuxt/content",
-  "twitter": "triandamai"
+  "github": "triandamai/cexup-docs",
+  "twitter": "cexup"
 }
