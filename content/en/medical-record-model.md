@@ -37,137 +37,218 @@ Seperti yang terlihat pada data diatas untuk menyimpan data medical record terda
 
 ## Skema
 
-### Body Mass Index
+### BODY_MASS_INDEX
 
-| Name       | description |
-|------------|-------------|
-| weight   |   float         |
-| height  |     float        |
+| Name        | type    | unit |
+|-------------|---------|------|
+| weight      | decimal | kg   |
+| height      | decimal | cm   |
 
 Contoh:
 ```json
   {
-    ...
-    "value":{
-        "weight":80,
-        "height":90
-    }
-    ...
+    "value":"{\"weight\":80, \"height\":90}"
+  
   }
 ```
 
-### Blood Pressure
+### BLOOD_PRESSURE
 
-| Name       | description |
-|------------|-------------|
-| systole   |   int          |
-| diastole  |     int        |
+| Name         | type | unit |
+|--------------|------|------|
+| systole      | int  | mmHg |
+| diastole     | int  | mmHg |
 
 Contoh:
 ```json5
   {
-    ...
-    "value":{
-        "systole":80,
-        "diastole":90
-    }
-    ...
+    "value":"{\"systole\":80, \"diastole\":90}"
   }
 ```
 
-### Blood Oxygen
+### BLOOD_OXYGEN
 
-| Name       | description |
-|------------|-------------|
-| value   |   int(%)          |
+| Name     | type  | unit |
+|----------|-------|------|
+| value    | int   | %    |
 
 Contoh:
 ```json5
   {
-    ...
     "value":"85"
-    ...
   }
 ```
 
-### Heart Rate
+### HEART_RATE
 
-| Name       | description |
-|------------|-------------|
-| value   |   int/minute         |
+| Name     | type | unit     |
+|----------|------|----------|
+| value    | int  | x/minute |
 
 Contoh:
 ```json
   {
-    ...
-    "value":70
-    ...
+    "value":"70"
   }
 ```
 
-### Waist
+### WAIST
 
-| Name       | description |
-|------------|-------------|
-| value   |   int(CM)          |
+| Name     | type    | unit  |
+|----------|---------|-------|
+| value    | decimal | CM    |
 
 Contoh:
 ```json
   {
-    ...
-    "value":40.5
-    ...
+    "value":"40.5"
   }
 ```
 
-### Waist
+### TEMPERATURE
 
-| Name       | description |
-|------------|-------------|
-| value   |   int(CM)         |
+| Name    | type    | unit    |
+|---------|---------|---------|
+| value   | decimal | Celsius |
 
 Contoh:
 ```json
   {
-    ...
-    "value":85
-    ...
+    "value":"85"
   }
 ```
 
-### Temperature
+### RESPIRATION
 
-| Name       | description |
-|------------|-------------|
-| value   |   decimal(Celcius)          |
+| Name   | type | unit |
+|--------|------|------|
+| value  | int  | %    |
 
 Contoh:
 ```json
   {
-    ...
-    "value":85
-    ...
+    "value":"85"
   }
 ```
 
-### Respiration
+### HPHT
 
-| Name       | description |
-|------------|-------------|
-| value   |   int(%)          |
+| Name    | type        | unit     |
+|---------|-------------|----------|
+| value   | bigint/long | datetime |
 
 Contoh:
 ```json
   {
-    ...
-    "value":85
-    ...
+    "value":"652324374000"
+  }
+```
+### EFW
+
+| Name    | type | unit  |
+|---------|------|-------|
+| value   | int  | grams |
+
+Contoh:
+```json
+  {
+    "value":"2500"
+  }
+```
+### FUNDAL_HEIGHT
+
+| Name    | type    | unit |
+|---------|---------|------|
+| value   | decimal | CM   |
+
+Contoh:
+```json
+  {
+    "value":"50"
   }
 ```
 
-### Pedometer
+### FHR
 
-### Sleep 
+| Name    | type | unit     |
+|---------|------|----------|
+| value   | int  | x/minute |
+
+Contoh:
+```json
+  {
+    "value":"50"
+  }
+```
+
+### HEMOGLOBIN
+
+| Name    | type | unit                    |
+|---------|------|-------------------------|
+| value   | int  | milligram/dl(deciliter) |
+
+Contoh:
+```json
+  {
+    "value":"50"
+  }
+```
+
+### URINE_PROTEIN
+
+| Name    | type | unit |
+|---------|------|------|
+| value   | int  | +    |
+
+Contoh:
+```json
+  {
+    "value":"2"
+  }
+```
+
+### REDUCTION_GLUCOSE
+
+| Name    | type | unit |
+|---------|------|------|
+| value   | int  | +    |
+
+Contoh:
+```json
+  {
+    "value":"2"
+  }
+```
+### MAP
+
+| Name    | type | unit |
+|---------|------|------|
+| value   | int  | %    |
+
+Contoh:
+```json
+  {
+    "value":"2"
+  }
+```
+
+### PEDOMETER
+```json
+{
+  "value": "{\"sportCalorie\":3.0,\"sportDistance\":70.0,\"sportEndTime\":1641214800000,\"sportStartTime\":1641213000000,\"sportStep\":86}"
+}
+
+```
+
+### SLEEP
+
+
+Contoh:
+```json
+  {
+    "value":"{\"deepSleepCount\":3,\"deepSleepTotal\":75,\"endTime\":1641172533000,\"lightSleepCount\":15,\"lightSleepTotal\":326,\"sleepData\":[{\"sleepLen\":2578,\"sleepStartTime\":1641148398000,\"sleepType\":242},{\"sleepLen\":1102,\"sleepStartTime\":1641150977000,\"sleepType\":241},{\"sleepLen\":5577,\"sleepStartTime\":1641152080000,\"sleepType\":242},{\"sleepLen\":2388,\"sleepStartTime\":1641157658000,\"sleepType\":241},{\"sleepLen\":2422,\"sleepStartTime\":1641160047000,\"sleepType\":242},{\"sleepLen\":1036,\"sleepStartTime\":1641162470000,\"sleepType\":241},{\"sleepLen\":9026,\"sleepStartTime\":1641163507000,\"sleepType\":242}],\"startTime\":1641148398000,\"wakeTime\":0}"
+  }
+```
 
 ## Response
 Skema response pada API Medical Record

@@ -39,12 +39,14 @@ other developer struggling with knowing what the type, that why we choose `enum`
 | LABTEST            |             |
 | MEDICINE           |             |
 | NOTE               |             |
-|HPHT   |  |
-|HEMOGLOBIN ||
-|FUNDAL_HEIGHT  ||
-|FHR    ||
-|URINE_PROTEIN  ||
-|REDUCTION_GLUCOSE  ||
+| HPHT               |             |
+| EFW                |             |
+| HEMOGLOBIN         |             |
+| FUNDAL_HEIGHT      |             |
+| FHR                |             |
+| URINE_PROTEIN      |             |
+| REDUCTION_GLUCOSE  |             |
+| MAP                |             |
 
 #### Medical Record Method
 | Name       | description |
