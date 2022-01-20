@@ -131,7 +131,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-   https://dev-admin.cexup.com/api/settings/password
+   https://dev-admin.cexup.com/api/patients
   ```
   </code-block>
   <code-block label="Open API">
