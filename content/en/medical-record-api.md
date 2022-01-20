@@ -112,8 +112,8 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
 
 #### Request Header
 
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
+| x-api-key | text(required) |
+|-----------|----------------|
 
 #### Query Params
 
@@ -155,8 +155,8 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
 
 #### Request Header
 
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
+| x-api-key | text(required) |
+|-----------|----------------|
 
 #### Query Params
 
@@ -199,8 +199,8 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
 
 #### Request Header
 
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
+| x-api-key | text(required) |
+|-----------|----------------|
 
 #### Query Params
 
@@ -242,8 +242,8 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
 
 #### Request Header
 
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
+| x-api-key | text(required) |
+|-----------|----------------|
 
 #### Query Params
 
@@ -285,8 +285,8 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
 
 #### Request Header
 
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
+| x-api-key | text(required) |
+|-----------|----------------|
 
 ### POST Medical Records
 
@@ -321,8 +321,8 @@ Registering device so the device can send data into medical record
 </code-group>
 
 #### Request Header
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
+| x-api-key | text(required) |
+|-----------|----------------|
 
 #### Body
 ```json
@@ -383,8 +383,8 @@ Registering device so the device can send data into medical record
 </code-group>
 
 #### Request Header
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
+| x-api-key | text(required) |
+|-----------|----------------|
 
 #### Body
 ```json
@@ -446,8 +446,8 @@ Registering device so the device can send data into medical record
 </code-group>
 
 #### Request Header
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
+| x-api-key | text(required) |
+|-----------|----------------|
 
 #### Body(Form Date)
 
@@ -494,9 +494,8 @@ Registering device so the device can send data into medical record
   </code-block>
 </code-group>
 
-#### Request Header
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
+| x-api-key | text(required) |
+|-----------|----------------|
 
 #### Body(Form Date)
 
@@ -544,5 +543,5 @@ Registering device so the device can send data into medical record
 </code-group>
 
 #### Request Header
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
+| x-api-key | text(required) |
+|-----------|----------------|
