@@ -26,7 +26,7 @@ Sebelum memulai perlu dicatat bahwa `API` berikut digunakan untuk semua aplikasi
 ## Medical Record
 Untuk Menyimpan,Merubah,Mengambil data medical record.
 
-### GET Medical Record
+### GET Medical Records
 <code-group>
   <code-block label="Http" active>
 
@@ -69,7 +69,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
 | size | data count to show |
 | page | pagination         |
 
-### GET By Date Range
+### GET With Date Range
 <code-group>
   <code-block label="Http" active>
 
@@ -123,7 +123,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
 | startDate | DateTimeMilis(bigint) |
 | endDate | DateTimeMilis(bigint)         |
 
-### GET Personal
+### GET Medical Record(Document)
 
 <code-group>
   <code-block label="Http" active>
@@ -167,7 +167,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
 | page | pagination         |
 | type | medical record type(optional)[enum](/medical-record-type#medical-record)     |
 
-### GET By Type
+### GET With Filter Type
 
 <code-group>
   <code-block label="Http" active>
@@ -211,7 +211,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
 | page | pagination         |
 | type | medical record type(optional)[enum](/medical-record-type#medical-record)    |
 
-### GET Latest
+### GET Latest Medical Record
  <code-group>
   <code-block label="Http" active>
 
@@ -253,7 +253,7 @@ Untuk Menyimpan,Merubah,Mengambil data medical record.
 | size | data count to show |
 | page | pagination         |
 
-### GET By Id
+### GET With Id
  <code-group>
   <code-block label="Http" active>
 
@@ -412,7 +412,7 @@ Registering device so the device can send data into medical record
 | method     | medical record method[method](/medical-record-type#medical-record) |
 | value      | value with type [`JSON`](medical-record-model#skema)               |
 
-### POST Personal
+### POST Medical Record(Document)
 
 Registering device so the device can send data into medical record
 
@@ -449,7 +449,7 @@ Registering device so the device can send data into medical record
 | x-api-key | text(required) |
 |-----------|----------------|
 
-#### Body(Form Date)
+#### Body(Form Data)
 
 | name      | type                                          | description |
 |-----------|-----------------------------------------------|-------------|
@@ -461,7 +461,7 @@ Registering device so the device can send data into medical record
 | diagnosis | String                                        |             |
 | title     | String                                        |             |
 
-### PUT Personal Medical Record
+### PUT Medical Record(Document)
 
 Registering device so the device can send data into medical record
 
@@ -497,7 +497,7 @@ Registering device so the device can send data into medical record
 | x-api-key | text(required) |
 |-----------|----------------|
 
-#### Body(Form Date)
+#### Body(Form Data)
 
 | name      | type                                          | description |
 |-----------|-----------------------------------------------|-------------|
