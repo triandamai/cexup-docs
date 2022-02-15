@@ -31,7 +31,7 @@ Authentication management
   <code-block label="Http" active>
 
   ```http request
-    https://app.cexup.com/api/login/patient
+    https://dev-app.cexup.com/api/login/patient
   ```
   </code-block>
   <code-block label="Open API">
@@ -50,7 +50,7 @@ Authentication management
 | Content-Type  | application/json |
 | Authorization | Bearer Token     |
 
-### Body
+#### Body
 
 ```json
 {
@@ -59,14 +59,18 @@ Authentication management
 }
 ```
 
+#### Tests
 
-### POST Register Patient
+```json
+{success,message,user} `{ success: true, message: Success, user: User Resource}`
+```
 
+### POST Login Doctor
 <code-group>
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/register/patient
+    https://dev-app.cexup.com/api/login/doctor
   ```
   </code-block>
   <code-block label="Open API">
@@ -77,6 +81,48 @@ Authentication management
 
   </code-block>
 </code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| Authorization | Bearer Token     |
+
+#### Body
+
+```json
+{
+    "username": "isman08",
+    "password": "password"
+}
+```
+
+#### Tests
+
+```json
+{success,message,user} `{ success: true, message: Success, user: User Resource}`
+```
+
+### POST Register Patient
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://dev-app.cexup.com/api/register/patient
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+
 
 #### Request Header
 
@@ -103,7 +149,7 @@ Authentication management
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/update/patient
+   https://dev-app.cexup.com/api/update/patient
   ```
   </code-block>
   <code-block label="Open API">
@@ -126,21 +172,17 @@ Authentication management
 #### Body
 
  ```json
-  {
-    "user_id": "eyJpdiI6InMzWW10S1kxazNoSGhuUFFzaUJJQ2c9PSIsInZhbHVlIjoiNml0VmpcLzJFd0VTSHBTWk91aHRvTlE9PSIsIm1hYyI6IjdhZmU0MWYzNGQ5YTZkOTEyNzZhMTBkZTUzOWI5NTNlMjZlZmZmYzNmYzlhNmU4YjYyOWI0ZmZhNjNiYjhkZTYifQ==",
-    "usernamae": null,
-    "email": null,
-    "name": null,
-    "address": null,
-    "gender": "laki-laki/perempuan",
+ {
+    "user_id": "eyJpdiI6Im5JMVBlTWZaVytmNVJmaVphQzE4K1E9PSIsInZhbHVlIjoiUmhSSlBsNmM5SjhMblpXOGpYc3BXUT09IiwibWFjIjoiZGI1MWE0ZDdjNGNhMzBlNGU4N2RlOGJhNDFjMmJmYmE5OTMzYzAzY2RkYjcyMDdjNzFjYTNlMGZlYzg5YTZkZiJ9",
+    "name": "John Doe",
+    "address": "adress here",
+    "gender": "perempuan / laki-laki",
     "date_of_birth": "Y-m-d (2020-01-22)",
-    "phone_number": null,
-    "type": null,
-    "no_type":null,
-    "provinsi_id": null,
-    "kabupaten_id": null,
-    "kecamatan_id": null,
-    "desa_id": null
+    "phone_number": "085xxx",
+    "provinsi_id": "1",
+    "kabupaten_id": "1",
+    "kecamatan_id": "1",
+    "desa_id": "2"
 }
   ```
 
@@ -150,7 +192,7 @@ Authentication management
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/avatar
+   https://dev-app.cexup.com/api/avatar
   ```
   </code-block>
   <code-block label="Open API">
@@ -187,7 +229,7 @@ Feature Menu Patient management:
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/doctor
+   https://dev-app.cexup.com/api/doctor
   ```
   </code-block>
   <code-block label="Open API">
@@ -220,7 +262,7 @@ Feature Menu Patient management:
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/doctor/show
+   https://dev-app.cexup.com/api/doctor/show
   ```
   </code-block>
   <code-block label="Open API">
@@ -254,7 +296,7 @@ Feature Menu Patient management:
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/doctor/get-time-list
+   https://dev-app.cexup.com/api/doctor/get-time-list
   ```
   </code-block>
   <code-block label="Open API">
@@ -289,7 +331,7 @@ Get list available hospital
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/hospitals
+   https://dev-app.cexup.com/api/hospitals
   ```
   </code-block>
   <code-block label="Open API">
@@ -319,7 +361,7 @@ Get list available hospital
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/hospitals/klinik-satelit-ui-makaras
+   https://dev-app.cexup.com/api/hospitals/klinik-satelit-ui-makaras
   ```
   </code-block>
   <code-block label="Open API">
@@ -344,7 +386,7 @@ Get list available hospital
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/hospitals/klinik-satelit-ui-makara/doctors
+   https://dev-app.cexup.com/api/hospitals/klinik-satelit-ui-makara/doctors
   ```
   </code-block>
   <code-block label="Open API">
@@ -374,7 +416,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/speciality
+   https://dev-app.cexup.com/api/speciality
   ```
   </code-block>
   <code-block label="Open API">
@@ -410,7 +452,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/doctor/show-speciality
+   https://dev-app.cexup.com/api/doctor/show-speciality
   ```
   </code-block>
   <code-block label="Open API">
@@ -444,7 +486,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/ecommerce/category/smartwatch
+   https://dev-app.cexup.com/api/ecommerce/category/smartwatch
   ```
   </code-block>
   <code-block label="Open API">
@@ -485,7 +527,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/ecommerce/category
+   https://dev-app.cexup.com/api/ecommerce/category
   ```
   </code-block>
   <code-block label="Open API">
@@ -536,7 +578,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/ecommerce/product
+   https://dev-app.cexup.com/api/ecommerce/product
   ```
   </code-block>
   <code-block label="Open API">
@@ -587,7 +629,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/ecommerce/product/cexme-e86-health-smartwatch---hitam
+   https://dev-app.cexup.com/api/ecommerce/product/cexme-e86-health-smartwatch---hitam
   ```
   </code-block>
   <code-block label="Open API">
@@ -636,7 +678,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/ecommerce/wishlist/eyJpdiI6InMzWW10S1kxazNoSGhuUFFzaUJJQ2c9PSIsInZhbHVlIjoiNml0VmpcLzJFd0VTSHBTWk91aHRvTlE9PSIsIm1hYyI6IjdhZmU0MWYzNGQ5YTZkOTEyNzZhMTBkZTUzOWI5NTNlMjZlZmZmYzNmYzlhNmU4YjYyOWI0ZmZhNjNiYjhkZTYifQ==
+   https://dev-app.cexup.com/api/ecommerce/wishlist/eyJpdiI6InMzWW10S1kxazNoSGhuUFFzaUJJQ2c9PSIsInZhbHVlIjoiNml0VmpcLzJFd0VTSHBTWk91aHRvTlE9PSIsIm1hYyI6IjdhZmU0MWYzNGQ5YTZkOTEyNzZhMTBkZTUzOWI5NTNlMjZlZmZmYzNmYzlhNmU4YjYyOWI0ZmZhNjNiYjhkZTYifQ==
   ```
   </code-block>
   <code-block label="Open API">
@@ -669,7 +711,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/ecommerce/wishlist
+   https://dev-app.cexup.com/api/ecommerce/wishlist
   ```
   </code-block>
   <code-block label="Open API">
@@ -700,7 +742,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/ecommerce/wishlist/{wishlist_id}
+   https://dev-app.cexup.com/api/ecommerce/wishlist/{wishlist_id}
   ```
   </code-block>
   <code-block label="Open API">
@@ -737,7 +779,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/article
+   https://dev-app.cexup.com/api/article
   ```
   </code-block>
   <code-block label="Open API">
@@ -768,7 +810,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/article/show
+   https://dev-app.cexup.com/api/article/show
   ```
   </code-block>
   <code-block label="Open API">
@@ -803,7 +845,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/user/orders
+   https://dev-app.cexup.com/api/user/orders
   ```
   </code-block>
   <code-block label="Open API">
@@ -835,7 +877,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/user/order/show
+   https://dev-app.cexup.com/api/user/order/show
   ```
   </code-block>
   <code-block label="Open API">
@@ -868,7 +910,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/user/orders
+   https://dev-app.cexup.com/api/user/orders
   ```
   </code-block>
   <code-block label="Open API">
@@ -900,7 +942,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/user/orders
+   https://dev-app.cexup.com/api/user/orders
   ```
   </code-block>
   <code-block label="Open API">
@@ -933,7 +975,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://app.cexup.com/api/doctor/booking
+   https://dev-app.cexup.com/api/doctor/booking
   ```
   </code-block>
   <code-block label="Open API">
@@ -950,6 +992,7 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+
 
 #### Body
 ```json
@@ -976,7 +1019,7 @@ Registering device so the device can send data into medical record
   <code-block label="Http" active>
 
   ```http request
-https://app.cexup.com/api/obgyn
+https://dev-app.cexup.com/api/obgyn
   ```
   </code-block>
   <code-block label="Open API">
@@ -1004,3 +1047,29 @@ https://app.cexup.com/api/obgyn
     "pekerjaan": "Direktur/etc... - optional"
 }
 ```
+
+### GET Obgyn
+
+Registering device so the device can send data into medical record
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+https://dev-app.cexup.com/api/obgyn/{user_id}
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| Authorization | Berer Token      |
