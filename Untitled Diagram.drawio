@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-22T04:25:43.272Z" agent="5.0 (Macintosh)" etag="uV_a0IbLrjY_xg8OZ6T1" version="16.6.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-02-22T04:28:27.342Z" agent="5.0 (Macintosh)" etag="r0bSRMEUCMTbsOMzE0YC" version="16.6.2" type="github" pages="2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Auth">
     <mxGraphModel dx="743" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -109,7 +109,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-8" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;fontColor=default;" edge="1" parent="vcGLFtt5jqAI8642_7jr-1" source="vcGLFtt5jqAI8642_7jr-3" target="vcGLFtt5jqAI8642_7jr-7">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry x="-0.2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-3" value="Sudah Melengkapi Profil" style="rhombus;whiteSpace=wrap;html=1;rounded=0;fontColor=default;" vertex="1" parent="vcGLFtt5jqAI8642_7jr-1">
           <mxGeometry x="95" y="210" width="90" height="90" as="geometry" />
@@ -133,14 +135,15 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-9" value="Memilih Tanggal" style="rounded=0;whiteSpace=wrap;html=1;fontColor=default;" vertex="1" parent="vcGLFtt5jqAI8642_7jr-1">
-          <mxGeometry x="75" y="600" width="120" height="60" as="geometry" />
+          <mxGeometry x="75" y="620" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-14" value="Gagal" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;fontColor=default;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="vcGLFtt5jqAI8642_7jr-1" source="vcGLFtt5jqAI8642_7jr-12" target="vcGLFtt5jqAI8642_7jr-2">
-          <mxGeometry relative="1" as="geometry">
+          <mxGeometry x="-0.0233" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="60" y="520" />
               <mxPoint x="60" y="120" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-17" value="&lt;div&gt;Berhasil&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;fontColor=default;" edge="1" parent="vcGLFtt5jqAI8642_7jr-1" source="vcGLFtt5jqAI8642_7jr-12" target="vcGLFtt5jqAI8642_7jr-9">
@@ -149,12 +152,12 @@
         <mxCell id="vcGLFtt5jqAI8642_7jr-12" value="&lt;div&gt;Mengambil detail&lt;/div&gt;&lt;div&gt;doctor&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;fontColor=default;" vertex="1" parent="vcGLFtt5jqAI8642_7jr-1">
           <mxGeometry x="70" y="470" width="130" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="vcGLFtt5jqAI8642_7jr-15" value="Tidak tersedia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;fontColor=default;" edge="1" parent="vcGLFtt5jqAI8642_7jr-1" target="vcGLFtt5jqAI8642_7jr-9">
+        <mxCell id="vcGLFtt5jqAI8642_7jr-15" value="Tidak tersedia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;fontColor=default;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="vcGLFtt5jqAI8642_7jr-1" source="vcGLFtt5jqAI8642_7jr-13" target="vcGLFtt5jqAI8642_7jr-9">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="90" y="740" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="40" y="740" />
-              <mxPoint x="40" y="630" />
+              <mxPoint x="40" y="760" />
+              <mxPoint x="40" y="650" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -162,13 +165,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-13" value="Mengambil &lt;br&gt;&lt;div&gt;available time&lt;/div&gt;&lt;div&gt;doctor&lt;br&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;fontColor=default;" vertex="1" parent="vcGLFtt5jqAI8642_7jr-1">
-          <mxGeometry x="90" y="700" width="90" height="80" as="geometry" />
+          <mxGeometry x="90" y="720" width="90" height="80" as="geometry" />
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;fontColor=default;" edge="1" parent="vcGLFtt5jqAI8642_7jr-1" source="vcGLFtt5jqAI8642_7jr-16" target="vcGLFtt5jqAI8642_7jr-21">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-16" value="Checkout Order" style="rounded=0;whiteSpace=wrap;html=1;fontColor=default;" vertex="1" parent="vcGLFtt5jqAI8642_7jr-1">
-          <mxGeometry x="75" y="830" width="120" height="60" as="geometry" />
+          <mxGeometry x="75" y="850" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-28" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;fontColor=default;" edge="1" parent="vcGLFtt5jqAI8642_7jr-1" source="vcGLFtt5jqAI8642_7jr-21" target="vcGLFtt5jqAI8642_7jr-27">
           <mxGeometry relative="1" as="geometry" />
