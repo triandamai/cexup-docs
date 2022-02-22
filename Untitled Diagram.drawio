@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-22T04:21:02.588Z" agent="5.0 (Macintosh)" etag="yQ9AQEC02PEnwAJk_X3G" version="16.6.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-02-22T04:24:42.871Z" agent="5.0 (Macintosh)" etag="vomqcc1_sWFs0oJKI3zL" version="16.6.2" type="github" pages="2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Auth">
     <mxGraphModel dx="743" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -185,7 +185,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-27" value="Mengisi Note &amp;amp; Kusioner" style="rounded=0;whiteSpace=wrap;html=1;fontColor=default;" vertex="1" parent="vcGLFtt5jqAI8642_7jr-1">
-          <mxGeometry x="354" y="975" width="120" height="60" as="geometry" />
+          <mxGeometry x="280" y="975" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;fontColor=default;" edge="1" parent="vcGLFtt5jqAI8642_7jr-1" source="vcGLFtt5jqAI8642_7jr-30" target="vcGLFtt5jqAI8642_7jr-37">
           <mxGeometry relative="1" as="geometry" />
@@ -196,7 +196,7 @@
         <mxCell id="vcGLFtt5jqAI8642_7jr-34" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;fontColor=default;" edge="1" parent="vcGLFtt5jqAI8642_7jr-1" source="vcGLFtt5jqAI8642_7jr-32" target="vcGLFtt5jqAI8642_7jr-30">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="550" y="1190" />
+              <mxPoint x="515" y="1190" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -204,15 +204,15 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="180" y="1190" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="630" y="1005" />
-              <mxPoint x="630" y="1120" />
+              <mxPoint x="570" y="1005" />
+              <mxPoint x="570" y="1120" />
               <mxPoint x="250" y="1120" />
               <mxPoint x="250" y="1190" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-32" value="Simpan Note &amp;amp; Kusioner" style="rhombus;whiteSpace=wrap;html=1;rounded=0;fontColor=default;" vertex="1" parent="vcGLFtt5jqAI8642_7jr-1">
-          <mxGeometry x="510" y="965" width="80" height="80" as="geometry" />
+          <mxGeometry x="460" y="962.5" width="110" height="85" as="geometry" />
         </mxCell>
         <mxCell id="vcGLFtt5jqAI8642_7jr-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;fontColor=default;" edge="1" parent="vcGLFtt5jqAI8642_7jr-1" source="vcGLFtt5jqAI8642_7jr-37" target="vcGLFtt5jqAI8642_7jr-38">
           <mxGeometry relative="1" as="geometry" />
