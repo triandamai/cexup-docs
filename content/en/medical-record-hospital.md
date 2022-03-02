@@ -54,8 +54,8 @@ Get list available hospital
 
 #### Request Header
 
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
+| x-api-key | text(required) |
+|-----------|----------------|
 
 #### Query Params
 
@@ -94,8 +94,8 @@ Get list available hospital
 
 #### Request Header
 
-| x-api-key | MTYzNTEzMDIzNDY0MA==16351302346401637558061370 |
-|-----------|------------------------------------------------|
+| x-api-key | text(required) |
+|-----------|----------------|
 
 #### Query Params
 
