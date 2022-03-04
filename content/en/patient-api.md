@@ -65,12 +65,12 @@ Authentication management
 {success,message,user} `{ success: true, message: Success, user: User Resource}`
 ```
 
-### POST Login Doctor
+### POST Login Providers
 <code-group>
   <code-block label="Http" active>
 
   ```http request
-    https://dev-app.cexup.com/api/login/doctor
+    https://pusdokkes-app.cexup.com/api/login/provider/{name}
   ```
   </code-block>
   <code-block label="Open API">
@@ -87,22 +87,16 @@ Authentication management
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
-| Authorization | Bearer Token     |
+
 
 #### Body
 
 ```json
 {
-    "username": "isman08",
-    "password": "password"
+    "email":"zidni.mujib5@gmail.com"
 }
 ```
 
-#### Tests
-
-```json
-{success,message,user} `{ success: true, message: Success, user: User Resource}`
-```
 
 ### POST Register Patient
 
@@ -110,7 +104,7 @@ Authentication management
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/register/patient
+   https://pusdokkes-app.cexup.com/api/register/patient
   ```
   </code-block>
   <code-block label="Open API">
@@ -129,6 +123,8 @@ Authentication management
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
 #### Body
 
@@ -149,7 +145,7 @@ Authentication management
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/update/patient
+   https://pusdokkes-app.cexup.com/api/update/patient
   ```
   </code-block>
   <code-block label="Open API">
@@ -166,7 +162,8 @@ Authentication management
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
-| Authorization | Bearer Token     |
+| accept        | application/json |
+| Authorization | Token Bearer     |
 
 
 #### Body
@@ -210,6 +207,7 @@ Authentication management
 |---------------|------------------|
 | Content-Type  | application/json |
 | Authorization | Bearer Token     |
+| accept        | application/json |
 
 #### Body
 
@@ -223,13 +221,13 @@ Authentication management
 ## Menu Patient
 Feature Menu Patient management:
 
-### POST List Doctor
+### GET List Doctor
 
 <code-group>
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/doctor
+   https://pusdokkes-app.cexup.com/api/doctor
   ```
   </code-block>
   <code-block label="Open API">
@@ -246,23 +244,18 @@ Feature Menu Patient management:
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
 
-#### Body
 
-
-| Name | description        |
-|------|--------------------|
-| data | data count to show |
-| page | pagination         |
-
-### POST  Detail Doctor
+### GET  Detail Doctor
 
 <code-group>
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/doctor/show
+   https://pusdokkes-app.cexup.com/api/doctor/{slug}
   ```
   </code-block>
   <code-block label="Open API">
@@ -276,19 +269,12 @@ Feature Menu Patient management:
 
 #### Request Header
 
-
-
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
-#### Body
-
-  ```json
-  {
-    "slug": "dr-Mario"
-}
-  ```
 
 ### POST Doctor Get Time List
 
@@ -296,7 +282,7 @@ Feature Menu Patient management:
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/doctor/get-time-list
+   https://pusdokkes-app.cexup.com/api/doctor/get-time-list
   ```
   </code-block>
   <code-block label="Open API">
@@ -312,7 +298,7 @@ Feature Menu Patient management:
 
 | Key           | Value            | 
 |---------------|------------------|
-| Content-Type  | application/json |
+| x-api-key     | {{x-api-key}}    |
 
 #### Body
 
@@ -321,8 +307,8 @@ Feature Menu Patient management:
   {
     "doctor_has_hospital_id" : "73",
     "date" : "2022-01-14",
-    "appointment" : "call"
-}
+    "appointment" : "call/reservation"
+  }
   ```
 ### POST List hospital
 Get list available hospital 
@@ -331,7 +317,7 @@ Get list available hospital
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/hospitals
+   https://pusdokkes-app.cexup.com/api/hospitals
   ```
   </code-block>
   <code-block label="Open API">
@@ -348,12 +334,10 @@ Get list available hospital
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
-#### Body
-| Name | description        |
-|------|--------------------|
-| data | data count to show |
-| page | pagination         |
+
 
 ### POST Detail hospital
 
@@ -361,7 +345,7 @@ Get list available hospital
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/hospitals/klinik-satelit-ui-makaras
+   https://pusdokkes-app.cexup.com/api/hospitals/klinik-satelit-ui-makaras
   ```
   </code-block>
   <code-block label="Open API">
@@ -378,7 +362,8 @@ Get list available hospital
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
-
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
 ### POST Hospital List Doctor
 
@@ -386,7 +371,7 @@ Get list available hospital
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/hospitals/klinik-satelit-ui-makara/doctors
+   https://pusdokkes-app.cexup.com/api/hospitals/klinik-satelit-ui-makara/doctors
   ```
   </code-block>
   <code-block label="Open API">
@@ -403,20 +388,19 @@ Get list available hospital
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
-
-
-
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
 
 ### GET  List Speciality
 
-Getting devices that has registered into database Cexup
+
 
 <code-group>
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/speciality
+   https://pusdokkes-app.cexup.com/api/speciality
   ```
   </code-block>
   <code-block label="Open API">
@@ -433,15 +417,9 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
-
-#### Body
-
-
-| Name | description        |
-|------|--------------------|
-| data | data count to show |
-| page | pagination         |
 
 
 ### POST  Speciality Doctor List
@@ -452,7 +430,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/doctor/show-speciality
+   https://pusdokkes-app.cexup.com/api/doctor/speciality/{slug}
   ```
   </code-block>
   <code-block label="Open API">
@@ -469,7 +447,8 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
-
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
 #### Body
 
@@ -486,7 +465,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/ecommerce/category/smartwatch
+   https://pusdokkes-app.cexup.com/api/ecommerce/category
   ```
   </code-block>
   <code-block label="Open API">
@@ -503,23 +482,9 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
-#### Body
-```json
-  {
-    "code": "200",
-    "success": true,
-    "message": "Ok",
-    "data": [
-        {
-            "id": 11,
-            "slug": "smartwatch",
-            "title": "SMARTWATCH",
-            "icon": "http://localhost:8082/storage/icons//125/conversions/JWrZrF7faF53ODWI-original.jpg"
-        }
-    ]
-}
-  ```
 
 ### GET Category E-commerce Show List Product
 
@@ -527,7 +492,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/ecommerce/category
+   https://pusdokkes-app.cexup.com/api/ecommerce/category/smartwatch
   ```
   </code-block>
   <code-block label="Open API">
@@ -544,41 +509,16 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
-#### Body
-```json
- {
-    "code": "200",
-    "success": true,
-    "message": "Ok",
-    "data": [
-        {
-            "id": 16,
-            "category": 11,
-            "slug": "cexme-e86-health-smartwatch---hitam",
-            "title": "CeXme E86 Health Smartwatch - Hitam",
-            "description": "<ul><li><span style=\"color: var(--N700,rgba(49,53,59,0.68));\">Kondisi:&nbsp;</span><span style=\"color: var(--N700,rgba(49,53,59,0.96));\">Baru</span></li><li><span style=\"color: var(--N700,rgba(49,53,59,0.68));\">Berat:&nbsp;</span><span style=\"color: var(--N700,rgba(49,53,59,0.96));\">200 Gram</span></li><li><span style=\"color: var(--N700,rgba(49,53,59,0.68));\">Kategori:&nbsp;</span><a href=\"https://www.tokopedia.com/p/handphone-tablet/wearable-devices/smart-watch\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--G500,#03AC0E);\"><strong>Smart Watch</strong></a></li><li><span style=\"color: var(--N700,rgba(49,53,59,0.68));\">Etalase:&nbsp;</span><a href=\"https://www.tokopedia.com/telecexup/etalase/all\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--G500,#03AC0E);\"><strong>Semua Etalase</strong></a></li></ul><p><strong style=\"color: var(--G500,#03AC0E);\"><span class=\"ql-cursor\">\ufeff\ufeff\ufeff\ufeff\ufeff\ufeff\ufeff\ufeff\ufeff\ufeff\ufeff\ufeff</span></strong></p><p>CeXme E86 Health Smartwatch</p><p><br></p><p>Health Smartwatch ini didesain khusus untuk memantau status kesehatanmu seperti :</p><p>- Body Temperature</p><p>- Blood Oxygen (Saturasi Oksigen - SPO2)</p><p>- Blood Pressure.</p><p>- Respiratory Rate</p><p>- Heart Rate</p><p>- ECG yg dilengkapi dengan analisa dari Artificial Intelligence.</p><p><br></p><p>CeXme Health Smartwatch ini sudah ditest akurasinya oleh beberapa Rumah Sakit di Indonesa, dengan ketepatan lebih dari 95% dibanding dengan peralatan kesehatan manual.</p><p><br></p><p>CeXme Health Smartwatch menyediakan aplikasi untuk individual: Smarthealth yg bisa didownload di Playstore &amp; App Store, dan dalam waktu dekat ini akan terkoneksi ke applikasi Rumah Sakit, sehingga anda dapat mengkonsultasikan status kesehatan anda melalui aplikasi Telemedicine Rumah Sakit.</p><p><br></p><p>CeXme baik digunakan untuk setiap orang untuk memantau kesehatan pribadi atau kesehatan orang tua ato pasien yg memiliki masalah kesehatan secara umum hingga penyakit jantung, karena dapat secara otomatis memantau Vital Sign setiap jamnya, sehingga dokter bisa mendapatkan data kesehatan anda secara akurat.</p><p><br></p><p><br></p><p>Catatan :</p><p>1. Walaupun Smartwatch ini untuk kesehatan, namun Smartwatch ini juga dapat digunakan untuk keperluan olah raga, entertainment, reminder, dll.</p><p>2. Apabila pemakai Smartwach ini menderita Kormobid, silahkan lakukan Kalibrasi Blood Pressurenya melalui aplikasi Rumah Sakit, karena standar Blood Pressure ini menggunakan standar orang sehat.</p><p>3. Segera hubungi Dokter ato Rumah Sakit, apabila menemukan ketidak normalan.</p><p>4. Jumlah Smartwatch ini sangat terbatas, apabila stock habis, silahkan melakukan PreOrder, baranng akan dikirimkan sekitar 2-4 minggu dari tanggal pemesanan.</p><p>5. Untuk keperluan Charging, mohon menggunakan Charger biasa yg ukurannya dibawah 2 ampere. Apabila tidak ada, silahkan charge melalui laptop ato komputer. Jangan menggunakan fast charger, karena Garansinya akan gugur.</p><p>6. Masa garansi : 12 (Dua belas) bulan</p>",
-            "price": "2250000.00",
-            "stock": 100,
-            "view": 57,
-            "link": "https://www.tokopedia.com/telecexup/cexme-e86-health-smartwatch-hitam?whid=0",
-            "thumb": "http://localhost:8082/storage/products//136/conversions/eqgoXtnLTCSUtbUY-original.jpg",
-            "original": [
-                "http://localhost:8082/storage/products//136/conversions/eqgoXtnLTCSUtbUY-original.jpg",
-                "http://localhost:8082/storage/products//137/conversions/IIBX0fIQRtiV5Q6S-original.jpg",
-                "http://localhost:8082/storage/products//196/conversions/kVu6cGGP9bLsqETf-original.jpg"
-            ]
-        }
-    ]
-}
-  ```
 ### GET Product E-commerce List
 
 <code-group>
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/ecommerce/product
+   https://pusdokkes-app.cexup.com/api/ecommerce/product
   ```
   </code-block>
   <code-block label="Open API">
@@ -595,41 +535,16 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
-#### Body (Response)
-```json
-  {
-    "code": "200",
-    "success": true,
-    "message": "Ok",
-    "data": [
-        {
-            "id": 16,
-            "category": 11,
-            "slug": "cexme-e86-health-smartwatch---hitam",
-            "title": "CeXme E86 Health Smartwatch - Hitam",
-            "description": "<ul><li><span style=\"color: var(--N700,rgba(49,53,59,0.68));\">Kondisi:&nbsp;</span><span style=\"color: var(--N700,rgba(49,53,59,0.96));\">Baru</span></li><li><span style=\"color: var(--N700,rgba(49,53,59,0.68));\">Berat:&nbsp;</span><span style=\"color: var(--N700,rgba(49,53,59,0.96));\">200 Gram</span></li><li><span style=\"color: var(--N700,rgba(49,53,59,0.68));\">Kategori:&nbsp;</span><a href=\"https://www.tokopedia.com/p/handphone-tablet/wearable-devices/smart-watch\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--G500,#03AC0E);\"><strong>Smart Watch</strong></a></li><li><span style=\"color: var(--N700,rgba(49,53,59,0.68));\">Etalase:&nbsp;</span><a href=\"https://www.tokopedia.com/telecexup/etalase/all\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--G500,#03AC0E);\"><strong>Semua Etalase</strong></a></li></ul><p><strong style=\"color: var(--G500,#03AC0E);\"><span class=\"ql-cursor\">﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿</span></strong></p><p>CeXme E86 Health Smartwatch</p><p><br></p><p>Health Smartwatch ini didesain khusus untuk memantau status kesehatanmu seperti :</p><p>- Body Temperature</p><p>- Blood Oxygen (Saturasi Oksigen - SPO2)</p><p>- Blood Pressure.</p><p>- Respiratory Rate</p><p>- Heart Rate</p><p>- ECG yg dilengkapi dengan analisa dari Artificial Intelligence.</p><p><br></p><p>CeXme Health Smartwatch ini sudah ditest akurasinya oleh beberapa Rumah Sakit di Indonesa, dengan ketepatan lebih dari 95% dibanding dengan peralatan kesehatan manual.</p><p><br></p><p>CeXme Health Smartwatch menyediakan aplikasi untuk individual: Smarthealth yg bisa didownload di Playstore &amp; App Store, dan dalam waktu dekat ini akan terkoneksi ke applikasi Rumah Sakit, sehingga anda dapat mengkonsultasikan status kesehatan anda melalui aplikasi Telemedicine Rumah Sakit.</p><p><br></p><p>CeXme baik digunakan untuk setiap orang untuk memantau kesehatan pribadi atau kesehatan orang tua ato pasien yg memiliki masalah kesehatan secara umum hingga penyakit jantung, karena dapat secara otomatis memantau Vital Sign setiap jamnya, sehingga dokter bisa mendapatkan data kesehatan anda secara akurat.</p><p><br></p><p><br></p><p>Catatan :</p><p>1. Walaupun Smartwatch ini untuk kesehatan, namun Smartwatch ini juga dapat digunakan untuk keperluan olah raga, entertainment, reminder, dll.</p><p>2. Apabila pemakai Smartwach ini menderita Kormobid, silahkan lakukan Kalibrasi Blood Pressurenya melalui aplikasi Rumah Sakit, karena standar Blood Pressure ini menggunakan standar orang sehat.</p><p>3. Segera hubungi Dokter ato Rumah Sakit, apabila menemukan ketidak normalan.</p><p>4. Jumlah Smartwatch ini sangat terbatas, apabila stock habis, silahkan melakukan PreOrder, baranng akan dikirimkan sekitar 2-4 minggu dari tanggal pemesanan.</p><p>5. Untuk keperluan Charging, mohon menggunakan Charger biasa yg ukurannya dibawah 2 ampere. Apabila tidak ada, silahkan charge melalui laptop ato komputer. Jangan menggunakan fast charger, karena Garansinya akan gugur.</p><p>6. Masa garansi : 12 (Dua belas) bulan</p>",
-            "price": "2250000.00",
-            "stock": 100,
-            "view": 57,
-            "link": "https://www.tokopedia.com/telecexup/cexme-e86-health-smartwatch-hitam?whid=0",
-            "thumb": "http://localhost:8082/storage/products//136/conversions/eqgoXtnLTCSUtbUY-original.jpg",
-            "original": [
-                "http://localhost:8082/storage/products//136/conversions/eqgoXtnLTCSUtbUY-original.jpg",
-                "http://localhost:8082/storage/products//137/conversions/IIBX0fIQRtiV5Q6S-original.jpg",
-                "http://localhost:8082/storage/products//196/conversions/kVu6cGGP9bLsqETf-original.jpg"
-            ]
-        }
-    ]
-}
-  ```
 ### GET Product E-commerce Show
 
 <code-group>
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/ecommerce/product/cexme-e86-health-smartwatch---hitam
+   https://pusdokkes-app.cexup.com/api/ecommerce/product/cexme-e86-health-smartwatch---hitam
   ```
   </code-block>
   <code-block label="Open API">
@@ -646,6 +561,8 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
 #### Body (Response)
 ```json
@@ -678,7 +595,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/ecommerce/wishlist/eyJpdiI6InMzWW10S1kxazNoSGhuUFFzaUJJQ2c9PSIsInZhbHVlIjoiNml0VmpcLzJFd0VTSHBTWk91aHRvTlE9PSIsIm1hYyI6IjdhZmU0MWYzNGQ5YTZkOTEyNzZhMTBkZTUzOWI5NTNlMjZlZmZmYzNmYzlhNmU4YjYyOWI0ZmZhNjNiYjhkZTYifQ==
+   https://pusdokkes-app.cexup.com/api/ecommerce/wishlist/{user_id}
   ```
   </code-block>
   <code-block label="Open API">
@@ -695,6 +612,8 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
 #### Body (Response)
 ```json
@@ -711,7 +630,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/ecommerce/wishlist
+   https://pusdokkes-app.cexup.com/api/ecommerce/wishlist
   ```
   </code-block>
   <code-block label="Open API">
@@ -728,6 +647,8 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
 #### Body
 ```json
@@ -742,7 +663,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/ecommerce/wishlist/{wishlist_id}
+   https://pusdokkes-app.cexup.com/api/ecommerce/wishlist/{wishlist_id}
   ```
   </code-block>
   <code-block label="Open API">
@@ -759,19 +680,13 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
-#### Body (Response)
-```json
-{
-    "code": 200,
-    "success": true,
-    "message": "Data has been deleted",
-    "data": null
-}
-  ```
+
 
 ## Artikel
-### POST List Artikel
+### GET List Artikel
 
 
 
@@ -779,7 +694,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/article
+   https://pusdokkes-app.cexup.com/api/article
   ```
   </code-block>
   <code-block label="Open API">
@@ -796,21 +711,16 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
-#### Body
-| Name | description        |
-|------|--------------------|
-| data | data count to show |
-| page | pagination         |
-
-
-### POST Detail Artikel
+### GET Detail Artikel
 
 <code-group>
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/article/show
+   https://pusdokkes-app.cexup.com/api/article/6-cara-menjaga-kesehatan-tubuh
   ```
   </code-block>
   <code-block label="Open API">
@@ -827,147 +737,12 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| x-api-key     | x-api-key        |
 
-#### Body
-
-```json
-{
-    "slug": "6-cara-menjaga-kesehatan-tubuhs"
-}
-  
-  ```
 
 
 ## Order 
-### POST User Order List
-
-<code-group>
-  <code-block label="Http" active>
-
-  ```http request
-   https://dev-app.cexup.com/api/user/orders
-  ```
-  </code-block>
-  <code-block label="Open API">
-
-  ```yaml
-  
-  ```
-
-  </code-block>
-</code-group>
-
-#### Request Header
-
-| Key           | Value            | 
-|---------------|------------------|
-| Content-Type  | application/json |
-
-#### Body
-
-  ```json
-  {
-    "user_id": "eyJpdiI6InMzWW10S1kxazNoSGhuUFFzaUJJQ2c9PSIsInZhbHVlIjoiNml0VmpcLzJFd0VTSHBTWk91aHRvTlE9PSIsIm1hYyI6IjdhZmU0MWYzNGQ5YTZkOTEyNzZhMTBkZTUzOWI5NTNlMjZlZmZmYzNmYzlhNmU4YjYyOWI0ZmZhNjNiYjhkZTYifQ"
-}
-  ```
-
-### POST User Order Show
-
-<code-group>
-  <code-block label="Http" active>
-
-  ```http request
-   https://dev-app.cexup.com/api/user/order/show
-  ```
-  </code-block>
-  <code-block label="Open API">
-
-  ```yaml
-  
-  ```
-
-  </code-block>
-</code-group>
-
-#### Request Header
-
-| Key           | Value            | 
-|---------------|------------------|
-| Content-Type  | application/json |
-
-#### Body
-
-
-  ```json
-  {
-    "transaction_id": "asd"
-}
-  ```
-
-### PUT Reschedulle Order
-
-<code-group>
-  <code-block label="Http" active>
-
-  ```http request
-   https://dev-app.cexup.com/api/user/orders
-  ```
-  </code-block>
-  <code-block label="Open API">
-
-  ```yaml
-  
-  ```
-
-  </code-block>
-</code-group>
-
-#### Request Header
-
-| Key           | Value            | 
-|---------------|------------------|
-| Content-Type  | application/json |
-
-#### Body
-
-| Name                   | description            |
-|------------------------|------------------------|
-| transaction_id         | required (string)      |
-| type                   | required (enum = accept / reject_by_patient / reschedulle_patient) |
-
-
-### PUT Cancel Order
-
-<code-group>
-  <code-block label="Http" active>
-
-  ```http request
-   https://dev-app.cexup.com/api/user/orders
-  ```
-  </code-block>
-  <code-block label="Open API">
-
-  ```yaml
-  
-  ```
-
-  </code-block>
-</code-group>
-
-#### Request Header
-
-| Key           | Value            | 
-|---------------|------------------|
-| Content-Type  | application/json |
-
-#### Body
-
-| Name                   | description            |
-|------------------------|------------------------|
-| transaction_id         | required (string)      |
-| type                   | required (enum = accept / reject_by_patient / reschedulle_patient) |
-
-
 
 ### POST Appointment Booking
 
@@ -975,7 +750,7 @@ Getting devices that has registered into database Cexup
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/doctor/booking
+   https://pusdokkes-app.cexup.com/api/doctor/booking
   ```
   </code-block>
   <code-block label="Open API">
@@ -992,11 +767,13 @@ Getting devices that has registered into database Cexup
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
-
+| accept        | application/json |
+| Authorization | Bearer Token     |
 
 #### Body
+
 ```json
-  {
+{
     // "username" : "required",
     "username_doctor" : "required",
     "user_id" : "required",
@@ -1006,6 +783,46 @@ Getting devices that has registered into database Cexup
     "patient" : "name patient",
     // "price" : "required",
     "allow_access_data" : true
+}
+```
+
+
+### PUT Cancel Order
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://pusdokkes-app.cexup.com/api/user/orders
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| accept        | application/json |
+| Authorization | Bearer Token     |
+
+#### Body
+
+```json
+  
+{
+    "transaction_id": "PSDS-MT61ff9e960134c",
+    "type": "reject_by_patient",
+    "bank_name": "BCA",
+    "account_number": "333",
+    "account_name": "Account Name"
 }
   ```
 
@@ -1019,7 +836,7 @@ Registering device so the device can send data into medical record
   <code-block label="Http" active>
 
   ```http request
-https://dev-app.cexup.com/api/obgyn
+https://pusdokkes-app.cexup.com/api/obgyn
   ```
   </code-block>
   <code-block label="Open API">
@@ -1035,6 +852,8 @@ https://dev-app.cexup.com/api/obgyn
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| accept        | application/json |
+| Authorization | Bearer Token     |
 
 #### Body
 ```json
@@ -1056,7 +875,7 @@ Registering device so the device can send data into medical record
   <code-block label="Http" active>
 
   ```http request
-https://dev-app.cexup.com/api/obgyn/{user_id}
+https://pusdokkes-app.cexup.com/api/obgyn/{user_id}
   ```
   </code-block>
   <code-block label="Open API">
@@ -1072,4 +891,67 @@ https://dev-app.cexup.com/api/obgyn/{user_id}
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
-| Authorization | Berer Token      |
+| accept        | application/json |
+| Authorization | Bearer Token     |
+
+## EWS (Early Warning Score)
+### POST EWS
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+https://pusdokkes-app.cexup.com/api/ews
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+| Key           | Value            | 
+|---------------|------------------|
+| x-api-key     | {{x-api-key}}    |
+
+
+#### Body
+```json
+{
+    "user_code":"AMSe5Sn8Gkxj7",
+    "point": 3,
+    "result":"sedang",
+    "produce_at": "1632889813001"
+}
+```
+
+### GET Ews Patient Current
+
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+https://pusdokkes-app.cexup.com/api/ews/PSDSDAOtl37m5G
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| accept        | application/json |
+| Authorization | Bearer Token     |
+
