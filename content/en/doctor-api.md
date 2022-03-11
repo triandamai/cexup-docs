@@ -241,6 +241,66 @@ Feature Menu Doctor management:
 | accept        | application/json |
 | Authorization | Token Bearer     |
 
+### POST Appointment SOAP
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   https://pusdokkes-app.cexup.com/api/user/order/doctor-note
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| accept        | application/json |
+| Authorization | Token Bearer     |
+
+#### Body
+
+```json
+  {
+  "transaction_id": "PSDS-MT621f63278829c",
+  "subjective": "<p>Subjective</p>",
+  "objective": "<p>Objective</p>",
+  "assesment": [
+  	{
+  		"id": "741241668",
+  		"name": "Screening for Covid"
+  	}
+  ],
+  "planing": {
+    "non_medical_mentosa": "<p>Non medical mentosa</p>",
+    "procedure": "<p>Procedure/saran</p>",
+    "medical_mentosa": [
+      {
+        "name": "nama_obat",
+        "qty": 6,
+        "per_day": "3x",
+        "instruction": "sesudah makan"
+      },
+      {
+        "name": "nama_obat",
+        "qty": 6,
+        "per_day": "3x",
+        "instruction": "sesudah makan"
+      }
+    ]
+  }
+}
+  ```
+
 ## Menu EWS
 Feature Menu EWS untuk Aplikasi Doctor :
 

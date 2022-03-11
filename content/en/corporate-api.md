@@ -31,7 +31,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-    https://dev-admin.cexup.com/api/login
+    https://pusdokkes-app.cexup.com/api/login
   ```
   </code-block>
   <code-block label="Open API">
@@ -49,7 +49,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 |---------------|------------------|
 | Content-Type  | application/json |
 | accept        | application/json |
-
+| x-api-key     | {{x-api-key}}    |
 
 #### Body
 
@@ -61,13 +61,13 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 ```
 
 
-### GET User
+### POST Nurse Update
 
 <code-group>
   <code-block label="Http" active>
 
   ```http request
-   https://dev-admin.cexup.com/api/user/dwilinasofiati@gmail.com
+   https://pusdokkes-app.cexup.com/api/update/nurse
   ```
   </code-block>
   <code-block label="Open API">
@@ -87,15 +87,23 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 | Authorization | Bearer Token     |
 | accept        | application/json |
 
+#### Body
 
+ ```json
+ {
+    "user_id": "eyJpdiI6Im5JMVBlTWZaVytmNVJmaVphQzE4K1E9PSIsInZhbHVlIjoiUmhSSlBsNmM5SjhMblpXOGpYc3BXUT09IiwibWFjIjoiZGI1MWE0ZDdjNGNhMzBlNGU4N2RlOGJhNDFjMmJmYmE5OTMzYzAzY2RkYjcyMDdjNzFjYTNlMGZlYzg5YTZkZiJ9",
+     "password": "password2"
+    
+}
+  ```
 
-### PATCH Setting Password
+### POST Register Pasien
 
 <code-group>
   <code-block label="Http" active>
 
   ```http request
-   https://dev-admin.cexup.com/api/settings/password
+   https://pusdokkes-app.cexup.com/api/register/patient
   ```
   </code-block>
   <code-block label="Open API">
@@ -112,26 +120,28 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
-| Authorization | Bearer Token     |
-| Accept        | application/json |
+| accept        | application/json |
+| x-api-key     | {{x-api-key}}    |
 
 
 #### Body
 
 ```json
 {
-    "password": "password2",
-    "password_confirmation": "password2"
+    "name" : "Afri Ismanto Hidayat",
+    "username" : "isman0832",
+    "email" : "afrihidayat832@gmail.com",
+    "password" : "password",
+    "address" : "Address here"
 }
 ```
-## Main Menu
 
-### GET Patient List
+### POST Reset Password
  <code-group>
   <code-block label="Http" active>
 
   ```http request
-   https://dev-admin.cexup.com/api/patients
+   https://pusdokkes-app.cexup.com/api/password/reset
   ```
   </code-block>
   <code-block label="Open API">
@@ -148,17 +158,24 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
-| Accept        | application/json |
 | Authorization | Bearer Token     |
 
+#### Body
 
+```json
+ {
+    "user_id": "user_id",
+    "password": "new_password"
+}
+  ```
 
-### GET Patient List With Query
+## Main
+### GET Patient List
  <code-group>
   <code-block label="Http" active>
 
   ```http request
-   https://dev-admin.cexup.com/api/patients?query[name]=zidnid
+   https://pusdokkes-app.cexup.com/api/patients
  ```
   </code-block>
   <code-block label="Open API">
@@ -178,12 +195,6 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 | Accept        | application/json |
 | Authorization | Bearer Token     |
 
-#### Query Params
-
-| Name         | description                             |
-|--------------|-----------------------------------------|
-| query[name]  |                        |
-
 
 
 ### GET Patient Show
@@ -192,7 +203,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-   https://dev-admin.cexup.com/api/patients/{user_code}  
+   https://pusdokkes-app.cexup.com/api/patients/{user_code}  
   ```
   </code-block>
   <code-block label="Open API">
@@ -211,181 +222,6 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 | Content-Type  | application/json |
 | Accept        | application/json |
 | Authorization | Bearer Token     |
-
-
-### POST Patient Store
-
-Getting devices that has registered into database Cexup
-
-<code-group>
-  <code-block label="Http" active>
-
-  ```http request
-  https://dev-admin.cexup.com/api/patients
-  ```
-  </code-block>
-  <code-block label="Open API">
-
-  ```yaml
-  
-  ```
-
-  </code-block>
-</code-group>
-
-#### Request Header
-
-| Key           | Value            | 
-|---------------|------------------|
-| Content-Type  | application/json |
-| Accept        | application/json |
-| Authorization | Bearer Token     |
-
-
-#### Body
-
-```json
-{
-    "name": "John Doe",
-    "email": "example@gmail.com",
-    "gender": "laki-laki/perempuan",
-    "address": "Example Address",
-    "username": "exampleUsername",
-    "password": "password",
-    "confirm_password": "password",
-    "phone_number": "081xxxxxx"
-}
-```
-
-### PATCH Patient Update
-
-<code-group>
-  <code-block label="Http" active>
-
-  ```http request
-   https://dev-admin.cexup.com/api/patients/{user_code}
-  ```
-  </code-block>
-  <code-block label="Open API">
-
-  ```yaml
-  
-  ```
-
-  </code-block>
-</code-group>
-
-#### Request Header
-
-
-
-| Key           | Value            | 
-|---------------|------------------|
-| Content-Type  | application/json |
-| Accept        | application/json |
-| Authorization | Bearer Token     |
-
-#### Body
-
-
-```json
-{
-    "name": "John Doe",
-    "gender": "laki-laki/perempuan",
-    "address": "Example Address",
-    "isreset": false,
-    "password": null,
-    "confirm_password": null,
-    "phone_number": "081xxxxxx"
-}
-```
-
-
-### GET Check Available Username
-
-
-
-<code-group>
-  <code-block label="Http" active>
-
-  ```http request
-   https://dev-admin.cexup.com/api/user/check/username/{exampleUsername}
-  ```
-  </code-block>
-  <code-block label="Open API">
-
-  ```yaml
-  
-  ```
-
-  </code-block>
-</code-group>
-
-#### Request Header
-
-| Key           | Value            | 
-|---------------|------------------|
-| Content-Type  | application/json |
-| Accept        | application/json |
-| Authorization | Bearer Token     |
-
-
-
-
-### GET Check Available Email
-
-<code-group>
-  <code-block label="Http" active>
-
-  ```http request
-   https://dev-admin.cexup.com/api/user/check/email/{example@gmail.com}
-  ```
-  </code-block>
-  <code-block label="Open API">
-
-  ```yaml
-  
-  ```
-
-  </code-block>
-</code-group>
-
-#### Request Header
-
-| Key           | Value            | 
-|---------------|------------------|
-| Content-Type  | application/json |
-| Accept        | application/json |
-| Authorization | Bearer Token     |
-
-
-### GET Check Available No_Type
-Get list available hospital 
-
-<code-group>
-  <code-block label="Http" active>
-
-  ```http request
-   https://dev-admin.cexup.com/api/user/check/no_type/{33021xxxx}
-  ```
-  </code-block>
-  <code-block label="Open API">
-
-  ```yaml
-  
-  ```
-
-  </code-block>
-</code-group>
-
-#### Request Header
-
-| Key           | Value            | 
-|---------------|------------------|
-| Content-Type  | application/json |
-| Accept        | application/json |
-| Authorization | Bearer Token     |
-
 
 ## Wilayah
 
