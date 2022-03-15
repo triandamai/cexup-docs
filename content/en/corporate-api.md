@@ -21,7 +21,7 @@ Dokumentasi berikut bertujuan untuk memandu anda dalam menggunakan data Corporat
 
 ## Introduce
 
-Sebelum memulai perlu dicatat bahwa `API` berikut digunakan untuk semua aplikasi dibawah naungan Cexup atau kita sebut `White Label` menggunakan `API` yang sama untuk COrporate, termasuk web,mobile,desktop dan lain sabagainya. `API` menggunakan protokol `Http REST` untuk komunikasi antara server dan client. beberapa request mewajibkan menambahkan header `Authorization` jika belum memiliki `Bearer Token` silahkan hubungi developer Cexup.
+Sebelum memulai perlu dicatat bahwa `API` berikut digunakan untuk semua aplikasi dibawah naungan Cexup atau kita sebut `White Label` menggunakan `API` yang sama untuk COrporate, termasuk web,mobile,desktop dan lain sabagainya. `API` menggunakan protokol `Http REST` untuk komunikasi antara server dan client. beberapa request mewajibkan menambahkan header `Authorization` atau `x-api-key` jika belum memiliki `Bearer Token` dan `{x-api-key}`  silahkan hubungi developer Cexup dan untuk `base_url` = https://pusdokkes-app.cexup.com/api
 
 ## Authentication
 Untuk Menyimpan,Merubah,Mengambil data Corporate.
@@ -31,7 +31,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-    https://pusdokkes-app.cexup.com/api/login
+    {base_url}/login
   ```
   </code-block>
   <code-block label="Open API">
@@ -67,7 +67,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/update/nurse
+   {base_url}/update/nurse
   ```
   </code-block>
   <code-block label="Open API">
@@ -103,7 +103,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/register/patient
+   {base_url}/register/patient
   ```
   </code-block>
   <code-block label="Open API">
@@ -141,7 +141,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/password/reset
+   {base_url}/password/reset
   ```
   </code-block>
   <code-block label="Open API">
@@ -175,7 +175,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/patients
+   {base_url}/patients
  ```
   </code-block>
   <code-block label="Open API">
@@ -203,7 +203,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/patients/{user_code}  
+   {base_url}/patients/{user_code}  
   ```
   </code-block>
   <code-block label="Open API">
@@ -231,7 +231,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/wilayah
+   {base_url}/wilayah
   ```
   </code-block>
   <code-block label="Open API">
@@ -256,7 +256,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-   https://dev-app.cexup.com/api/wilayah/11
+   {base_url}/wilayah/11
   ```
   </code-block>
   <code-block label="Open API">
