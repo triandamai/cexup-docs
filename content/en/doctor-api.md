@@ -21,7 +21,7 @@ Dokumentasi berikut bertujuan untuk memandu anda dalam menggunakan data Dokter p
 
 ## Introduce
 
-Sebelum memulai perlu dicatat bahwa `API` berikut digunakan untuk semua aplikasi dibawah naungan Cexup atau kita sebut `White Label` menggunakan `API` yang sama untuk COrporate, termasuk web,mobile,desktop dan lain sabagainya. `API` menggunakan protokol `Http REST` untuk komunikasi antara server dan client. beberapa request mewajibkan menambahkan header `Authorization` jika belum memiliki `Bearer Token` silahkan hubungi developer Cexup.
+Sebelum memulai perlu dicatat bahwa `API` berikut digunakan untuk semua aplikasi dibawah naungan Cexup atau kita sebut `White Label` menggunakan `API` yang sama untuk COrporate, termasuk web,mobile,desktop dan lain sabagainya. `API` menggunakan protokol `Http REST` untuk komunikasi antara server dan client. beberapa request mewajibkan menambahkan header `Authorization` atau `x-api-key` jika belum memiliki `Bearer Token` dan `{x-api-key}`  silahkan hubungi developer Cexup dan untuk `base_url` = https://pusdokkes-app.cexup.com/api
 
 ## Authentication
 Authentication management
@@ -31,7 +31,7 @@ Authentication management
   <code-block label="Http" active>
 
   ```http request
-    https://pusdokkes-app.cexup.com/api/login/doctor
+    {base_url}/login/doctor
   ```
   </code-block>
   <code-block label="Open API">
@@ -48,7 +48,6 @@ Authentication management
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
-| Authorization | Bearer Token     |
 | accept        | application/json |
 | x-api-key     | x-api-key        |
 
@@ -74,7 +73,7 @@ Authentication management
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/update/doctor
+    {base_url}/update/doctor
   ```
   </code-block>
   <code-block label="Open API">
@@ -118,7 +117,7 @@ Authentication management
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/avatar
+    {base_url}/avatar
   ```
   </code-block>
   <code-block label="Open API">
@@ -156,7 +155,7 @@ Feature Menu Doctor management:
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/doctor/summary/1
+    {base_url}/doctor/summary/1
   ```
   </code-block>
   <code-block label="Open API">
@@ -183,7 +182,7 @@ Feature Menu Doctor management:
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/doctor/orders/1?appointment=call&type=missed&page=1&data=10
+    {base_url}/doctor/orders/1?appointment=call&type=missed&page=1&data=10
   ```
   </code-block>
   <code-block label="Open API">
@@ -221,7 +220,7 @@ Feature Menu Doctor management:
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/orders/show/PSDS-MT6209fa6b1ad85
+    {base_url}/orders/show/PSDS-MT6209fa6b1ad85
   ```
   </code-block>
   <code-block label="Open API">
@@ -247,7 +246,7 @@ Feature Menu Doctor management:
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/user/order/doctor-note
+    {base_url}/user/order/doctor-note
   ```
   </code-block>
   <code-block label="Open API">
@@ -311,7 +310,7 @@ Feature Menu EWS untuk Aplikasi Doctor :
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/ews/patient/{doctor_id}
+   {base_url}/ews/patient/{doctor_id}
   ```
   </code-block>
   <code-block label="Open API">
@@ -338,7 +337,7 @@ Feature Menu EWS untuk Aplikasi Doctor :
   <code-block label="Http" active>
 
   ```http request
-    https://pusdokkes-app.cexup.com/api/ews/patient/{doctor_id}/{status}
+    {base_url}/ews/patient/{doctor_id}/{status}
   ```
   </code-block>
   <code-block label="Open API">
@@ -365,7 +364,7 @@ Feature Menu EWS untuk Aplikasi Doctor :
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/ews/history/{user_code}?page=1&data=10
+   {base_url}/ews/history/{user_code}?page=1&data=10
   ```
   </code-block>
   <code-block label="Open API">
@@ -399,7 +398,7 @@ Feature Menu EWS untuk Aplikasi Doctor :
   <code-block label="Http" active>
 
   ```http request
-   https://pusdokkes-app.cexup.com/api/user/order/doctor-note
+   {base_url}/user/order/doctor-note
   ```
   </code-block>
   <code-block label="Open API">
