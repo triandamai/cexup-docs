@@ -136,12 +136,12 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 }
 ```
 
-### POST Reset Password
+### POST Change Password
  <code-group>
   <code-block label="Http" active>
 
   ```http request
-   {base_url}/password/reset
+   {{api_url}}change-password/{role}
   ```
   </code-block>
   <code-block label="Open API">
@@ -158,24 +158,24 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 | Key           | Value            | 
 |---------------|------------------|
 | Content-Type  | application/json |
+| Accept        | application/json |
 | Authorization | Bearer Token     |
 
 #### Body
 
 ```json
- {
-    "user_id": "user_id",
-    "password": "new_password"
+{
+    "password": "12345678"
 }
   ```
 
 ## Main
-### GET Patient List
+### GET Patient With Current Disease
  <code-group>
   <code-block label="Http" active>
 
   ```http request
-   {base_url}/patients
+   {{api_url}}patients-disease
  ```
   </code-block>
   <code-block label="Open API">
@@ -204,6 +204,33 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 
   ```http request
    {base_url}/patients/{user_code}  
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| Accept        | application/json |
+| Authorization | Bearer Token     |
+
+
+### GET Top 10 Disease
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {{api_url}}patients-disease
   ```
   </code-block>
   <code-block label="Open API">
@@ -345,3 +372,67 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 | scope                  | icdapi_access          |
 | client_id              | c0d16ff1-714c-4657-bdc3-8c8027d4efef_f266bfb8-1b03-4895-9988-95b1956de98a  |
 | client_secret          | 1F0fqZOaOkkVx/65vuy3Bbh6sGqoSfw5o3uKN90VjEE= |
+
+
+## EWS
+### GET Ews Patient Current
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {{api_url}}ews/PSDSDAOtl37m5G
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| Accept        | application/json |
+| Authorization | Bearer Token     |
+
+
+### GET Ews Patient History
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {{api_url}}ews/history/PSDStj5DlgdJFh?page=2&data=1
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| Accept        | application/json |
+| Authorization | Bearer Token     |
+
+
+#### Query Params
+
+| Key           | Value | 
+|---------------|-------|
+| Page          | 2     |
+| data          | 1     |
+
