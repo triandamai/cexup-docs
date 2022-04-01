@@ -21,7 +21,7 @@ Dokumentasi berikut bertujuan untuk memandu anda dalam menggunakan data Dokter p
 
 ## Introduce
 
-Sebelum memulai perlu dicatat bahwa `API` berikut digunakan untuk semua aplikasi dibawah naungan Cexup atau kita sebut `White Label` menggunakan `API` yang sama untuk COrporate, termasuk web,mobile,desktop dan lain sabagainya. `API` menggunakan protokol `Http REST` untuk komunikasi antara server dan client. beberapa request mewajibkan menambahkan header `Authorization` atau `x-api-key` jika belum memiliki `Bearer Token` dan `{x-api-key}`  silahkan hubungi developer Cexup dan untuk `base_url` = https://pusdokkes-app.cexup.com/api
+Sebelum memulai perlu dicatat bahwa `API` berikut digunakan untuk semua aplikasi dibawah naungan Cexup atau kita sebut `White Label` menggunakan `API` yang sama untuk COrporate, termasuk web,mobile,desktop dan lain sabagainya. `API` menggunakan protokol `Http REST` untuk komunikasi antara server dan client. beberapa request mewajibkan menambahkan header `Authorization` atau `x-api-key` jika belum memiliki `Bearer Token` dan `{x-api-key}`  silahkan hubungi developer Cexup.
 
 ## Authentication
 Authentication management
@@ -285,6 +285,67 @@ Feature Menu Doctor management:
     "medical_mentosa": [
       {
         "name": "nama_obat",
+        "qty": "VI",
+        "per_day": "3x",
+        "instruction": "sesudah makan"
+      },
+      {
+        "name": "nama_obat",
+        "qty": "VI",
+        "per_day": "3x",
+        "instruction": "sesudah makan"
+      }
+    ]
+  }
+}
+  ```
+
+### POST Doctor Note
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {base_url}/user/order/doctor-note
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| accept        | application/json |
+| Authorization | Token Bearer     |
+
+
+#### Body
+
+ ```json
+{
+  "transaction_id": "PSDS-MT621f63278829c",
+  "subjective": "<p>Subjective</p>",
+  "objective": "<p>Objective</p>",
+  "assesment": [
+  	{
+  		"id": "741241668",
+  		"name": "Screening for Covid"
+  	}
+  ],
+  "planing": {
+    "non_medical_mentosa": "<p>Non medical mentosa</p>",
+    "procedure": "<p>Procedure/saran</p>",
+    "medical_mentosa": [
+      {
+        "name": "nama_obat",
         "qty": 6,
         "per_day": "3x",
         "instruction": "sesudah makan"
@@ -298,6 +359,7 @@ Feature Menu Doctor management:
     ]
   }
 }
+  
   ```
 
 ## Menu EWS
@@ -392,13 +454,16 @@ Feature Menu EWS untuk Aplikasi Doctor :
 | page          | 1                |
 | data          | 10               |
 
-### POST Doctor Note
+
+
+## Kuisioner
+### GET Kuisioner
 
 <code-group>
   <code-block label="Http" active>
 
   ```http request
-   {base_url}/user/order/doctor-note
+   {{api_url}}kuisioner/PSDS-MT623bfc3c147cf
   ```
   </code-block>
   <code-block label="Open API">
@@ -416,40 +481,5 @@ Feature Menu EWS untuk Aplikasi Doctor :
 |---------------|------------------|
 | Content-Type  | application/json |
 | accept        | application/json |
-| Authorization | Token Bearer     |
+| x-api-key     | {{x-api-key}}    |
 
-
-#### Body
-
- ```json
-{
-  "transaction_id": "PSDS-MT621f63278829c",
-  "subjective": "<p>Subjective</p>",
-  "objective": "<p>Objective</p>",
-  "assesment": [
-  	{
-  		"id": "741241668",
-  		"name": "Screening for Covid"
-  	}
-  ],
-  "planing": {
-    "non_medical_mentosa": "<p>Non medical mentosa</p>",
-    "procedure": "<p>Procedure/saran</p>",
-    "medical_mentosa": [
-      {
-        "name": "nama_obat",
-        "qty": 6,
-        "per_day": "3x",
-        "instruction": "sesudah makan"
-      },
-      {
-        "name": "nama_obat",
-        "qty": 6,
-        "per_day": "3x",
-        "instruction": "sesudah makan"
-      }
-    ]
-  }
-}
-  
-  ```
