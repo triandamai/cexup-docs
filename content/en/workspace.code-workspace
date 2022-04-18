@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\cexup-web-admin-rs"
+		},
+		{
+			"path": "..\\..\\..\\cexup-web-client"
+		},
+		{
+			"path": "..\\..\\..\\cexup-web-doctor"
+		},
+		{
+			"path": "..\\..\\..\\cexup-api"
+		},
+		{
+			"path": "..\\.."
+		}
+	]
+}
