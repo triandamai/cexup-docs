@@ -175,7 +175,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-   {{api_url}}patients-disease
+   {{api_url}}nurse/patients-disease
  ```
   </code-block>
   <code-block label="Open API">
@@ -203,7 +203,7 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
   <code-block label="Http" active>
 
   ```http request
-   {base_url}/patients/{user_code}  
+   {base_url}nurse/patients/{user_code}  
   ```
   </code-block>
   <code-block label="Open API">
@@ -436,3 +436,111 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 | Page          | 2     |
 | data          | 1     |
 
+
+### GET Summary EWS Per-Faskes
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {{api_url}}nurse/ews
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| Accept        | application/json |
+| Authorization | Bearer Token     |
+
+
+## Doctor
+### GET Doctor List per Faskes
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {{api_url}}nurse/doctor
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| Accept        | application/json |
+| Authorization | Bearer Token     |
+
+
+### GET Doctor Show
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {{api_url}}doctor/{slug}
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| Accept        | application/json |
+| x-api-key     | {x-api-key}      |
+
+
+### GET Qr Code Doctor
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {{api_url}}nurse/qr/generate/{slug}
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| Accept        | application/json |
+| Authorization | Bearer Token     |

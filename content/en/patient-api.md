@@ -956,3 +956,67 @@ Registering device so the device can send data into medical record
 | accept        | application/json |
 | Authorization | Bearer Token     |
 
+
+## Family Tree
+### POST Add personal family
+
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+  {{api_url}}family
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| accept        | application/json |
+| Authorization | Bearer Token     |
+
+#### Body
+
+
+  ```json
+    {
+        "child_code":"RUIkDyPXmAshD",
+        "child_type":"family_member"
+    }
+  ```
+
+### PATCH Accept invited
+
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+  {{api_url}}family/accept/eyJpdiI6ImNBUlJ5MUppc2RRTmJsNmk4dUN0NXc9PSIsInZhbHVlIjoiMkZkZlJUNEtnNVZjdDAxWmxoK2NDQT09IiwibWFjIjoiZWU1NmM1NWEzNDQyMTc4ZWUxM2Q3ZWE3YzQ1MTY5YmIxZGVhNzc2ZjhiYTRkNzhkNjU5NjMzNzVlZDYyZWFkYyJ9
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| accept        | application/json |
+| Authorization | Bearer Token     |
+
