@@ -544,3 +544,42 @@ Untuk Menyimpan,Merubah,Mengambil data Corporate.
 | Content-Type  | application/json |
 | Accept        | application/json |
 | Authorization | Bearer Token     |
+
+
+## Family Tree Corporate
+### POST Nurse Add Family Tree
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {{api_url}}nurse/patient/addFamilyTree
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| Accept        | application/json |
+| Authorization | Bearer Token     |
+
+#### Body
+
+ ```json
+ {
+    "parent_code": "RUIUAwLrrLeRC",
+    "child_name": "Farhan Aditya",
+    "child_type": "child"
+}
+ 
+  ```
