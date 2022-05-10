@@ -459,6 +459,55 @@ Getting devices that has registered into database Cexup
   }
   ```
 
+  
+## Wilayah
+### GET Wilayah
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {{api_url}}wilayah
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| x-api-key     | x-api-key        |
+
+### GET Detail Wilayah
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {{api_url}}wilayah/64
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| x-api-key     | x-api-key        |
+
+
 ## E-Commerce
 ### GET Category E-commerce
 
@@ -788,7 +837,7 @@ Getting devices that has registered into database Cexup
 ```
 
 
-### PUT Cancel Order
+### PUT Cancel Order By Patient
 
 <code-group>
   <code-block label="Http" active>
@@ -824,6 +873,115 @@ Getting devices that has registered into database Cexup
     "bank_name": "BCA",
     "account_number": "333",
     "account_name": "Account Name"
+}
+  ```
+
+### PUT Cancel Order By Doctor
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {base_url}/user/orders
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| accept        | application/json |
+| Authorization | Bearer Token     |
+
+#### Body
+
+```json
+{
+    "transaction_id": "PSDS-MT61ff9e960134c",
+    "type": "reject"
+}
+  ```
+
+### PUT Order Reschedule
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {{api_url}}user/orders
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| accept        | application/json |
+| Authorization | Bearer Token     |
+
+#### Body
+
+```json
+  
+{
+    "transaction_id": "PSDS-MT623d7a1270804",
+    "type": "reschedule",
+    "date": "2022-03-25",
+    "time": "17:00"
+}
+  ```
+
+### PUT Order Accept
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+   {{api_url}}user/orders
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+  
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| accept        | application/json |
+| Authorization | Bearer Token     |
+
+#### Body
+
+```json
+  
+{
+    "transaction_id": "cxp-xxxxx",
+    "type": "accept"
 }
   ```
 
@@ -958,6 +1116,35 @@ Registering device so the device can send data into medical record
 
 
 ## Family Tree
+### Get Family
+
+
+<code-group>
+  <code-block label="Http" active>
+
+  ```http request
+  {{api_url}}family
+  ```
+  </code-block>
+  <code-block label="Open API">
+
+  ```yaml
+ 
+  ```
+
+  </code-block>
+</code-group>
+
+#### Request Header
+| Key           | Value            | 
+|---------------|------------------|
+| Content-Type  | application/json |
+| accept        | application/json |
+| Authorization | Bearer Token     |
+
+
+
+
 ### POST Add personal family
 
 
